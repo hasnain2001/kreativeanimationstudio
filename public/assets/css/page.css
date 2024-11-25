@@ -1,0 +1,109 @@
+/* Hero Section Enhancements */
+
+  
+ 
+  
+  .hero-contact .container {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-contact h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .hero-contact h1 span {
+    color: #ff7c57;
+    border-bottom: 4px solid #ff7c57;
+  }
+  
+  .hero-contact p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Section Enhancements */
+  .contact .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .contact .section-title h2 {
+    font-size: 32px;
+    color: #333;
+  }
+  
+  .contact .section-title div span {
+    display: inline-block;
+    margin-top: 5px;
+    color: #555;
+    font-weight: 600;
+  }
+  
+  .contact .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .contact .info-item i {
+    font-size: 24px;
+    color: #ff7c57;
+  }
+  
+  .contact .info-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .contact .info-item p {
+    font-size: 16px;
+    margin: 0;
+    color: #666;
+  }
+  
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .contact .php-email-form button {
+    background-color: #ff7c57;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .contact .php-email-form button:hover {
+    background-color: #ff9775;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .hero-contact h1 {
+      font-size: 28px;
+    }
+  
+    .contact .info-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contact .info-item i {
+      margin-bottom: 10px;
+    }
+  }
