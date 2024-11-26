@@ -31,7 +31,11 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('/about/success-measurement', 'success')->name('success');
     Route::get('/about/project-documentation', 'project')->name('project');
     Route::get('/about/our-process', 'our_process')->name('our-process');
+
+
+});
 // sevices Animated Videos   pages //
+Route::controller(HomeController::class)->prefix('service')->group(function(){
 Route::get('/2d-animation-service', 'animation_2d')->name('animation-2d');
 Route::get('/3d-animation-service', 'animation_3d')->name('animation-3d');
 Route::get('/animated-explainer-video-service', 'explain_video')->name('explain-video');
@@ -40,6 +44,9 @@ Route::get('/animated-promotional-video-service', 'promotional_video')->name('pr
 Route::get('/stop-motion-animation-service', 'stop_motion')->name('stop_motion');
 Route::get('/animated-logo-design-service', 'logo_animation')->name('logo_animation');
 Route::get('/whiteboard-animation-service', 'whiteboard')->name('whiteboard');
+Route::get('/storyboard-animation-service', 'storyboard')->name('storyboard');
+Route::get('/frame-by-frame-animation-service', 'frame_by_frame')->name('frame_by_frame');
+Route::get('/video-editing-service', 'video_editing')->name('video-editing');
 
 });
 

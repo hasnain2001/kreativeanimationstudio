@@ -113,8 +113,18 @@
 
 .dropdown-large .dropdown-header {
   font-weight: bold;
-  font-size: 0.5rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
+}
+.dropdown-large .dropdown-item {
+    font-size: 10px; /* Adjusts the font size of links */
+    color: #333;     /* Default link color */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.dropdown-large .dropdown-item:hover {
+    color: #007bff;  /* Highlight color on hover */
+  
 }
 
 /* Adjust positioning to avoid overflowing */
@@ -164,6 +174,9 @@
                         <li><a class="dropdown-item" href="{{route('stop_motion')}}">Stop Motion</a></li>
                         <li><a class="dropdown-item" href="{{route('logo_animation')}}">Logo Animation</a></li>
                         <li><a class="dropdown-item" href="{{route('whiteboard')}}">WhiteBoard</a></li>
+                        <li><a class="dropdown-item" href="{{route('storyboard')}}">storyboard</a></li>
+                        <li><a class="dropdown-item" href="{{route('frame_by_frame')}}">frame by frame</a></li>
+                        <li><a class="dropdown-item" href="{{route('video-editing')}}">Videp Editing</a></li>
                         
                       </ul>
                     </div>

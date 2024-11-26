@@ -36,30 +36,40 @@ class HomeController extends Controller
    public function our_process(){
       return view('our-process');
    }
+   //animated videos//
    public function animation_2d(){
-      return view('2d-animation');
+      return view('animated-videos.2d-animation');
    }
    public function animation_3d(){
-      return view('3d-animation');
+      return view('animated-videos.3d-animation');
    }
    public function explain_video(){
-      return view('explainer-video');
+      return view('animated-videos.explainer-video');
    }
    public function motion_graphic(){
-      return view('motion-graphic');
+      return view('animated-videos.motion-graphic');
    }
    public function promotional_video(){
-      return view('promotional-video');
+      return view('animated-videos.promotional-video');
    }
    public function stop_motion(){
-      return view('stopmotion');
+      return view('animated-videos.stopmotion');
    }
    public function logo_animation(){
-      return view('logo-animation');
+      return view('animated-videos.logo-animation');
    }
 
    public function whiteboard(){
-      return view('whiteboard');
+      return view('animated-videos.whiteboard');
+   }
+   public function storyboard(){
+      return view('animated-videos.storyboard');
+   }
+   public function frame_by_frame(){
+      return view('animated-videos.frame-by-frame');
+   }
+   public function video_editing(){
+      return view('animated-videos.video-editing');
    }
 
 }
