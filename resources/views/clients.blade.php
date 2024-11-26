@@ -14,10 +14,19 @@ Client Onboarding Process
     display: flex;
     align-items: center;
     position: relative;
-    background: url('{{ asset('images/2d-1.jpg') }}') center center / cover no-repeat;
+    background: url('{{ asset('images/client Onboarding Process.png') }}') center center / cover no-repeat;
     overflow: hidden;
 }
-
+.hero-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the RGBA values for your desired shade */
+    z-index: 2;
+}
 .hero-waves {
     position: absolute;
     bottom: 0;

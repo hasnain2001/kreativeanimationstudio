@@ -6,7 +6,7 @@ header("X-Robots-Tag:index, follow");?>
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title> @yield('title') Animators | Creative Video Animation Services USA</title>
+  <title> @yield('title') </title>
   <meta name="description" content="Explore a wide range of premium leather jackets for men and women. Shop stylish, durable outerwear and elevate your fashion with top-quality designs.">
 
   <meta name="keywords" content="leather jackets, premium jackets, men's jackets, women's jackets, stylish outerwear, durable jackets, fashion, leatherwear">

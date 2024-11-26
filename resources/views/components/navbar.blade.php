@@ -4,60 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Transparent Header</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Responsive Transparent Header</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Transparent Header */
+    /* General Header Styles */
     .header {
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
       background-color: transparent;
+
     }
 
     .header.scrolled {
-      color: black;
       background-color: white;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
+    /* Navbar Styles */
     .navbar {
       transition: background-color 0.3s ease;
       background-color: transparent;
+
     }
 
     .navbar.scrolled {
       background-color: white;
     }
 
-    /* Nav-link default styles */
+    /* Nav-link Styles */
     .nav-link {
-      color: white !important; /* Default white color at the top */
+      color: white !important;
       transition: color 0.3s ease;
     }
 
-    /* Nav-link styles when scrolled */
     .header.scrolled .nav-link {
-      color: black !important; /* Black color when scrolled */
-     
+      color: black !important;
     }
 
-    /* Active link styling */
+    /* Active Link */
     .nav-link.active {
       font-weight: bold;
-      color: #fe5b36 !important; /* Active link color */
-    }
-
-    .header.scrolled .nav-link.active {
       color: #fe5b36 !important;
     }
 
-    /* Mobile nav toggle */
-    .mobile-nav-toggle {
+    /* Mega Dropdown Menu */
+    .mega-dropdown-menu {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+    }
+
+    .mega-dropdown-menu .dropdown-header {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #e74c3c;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #e74c3c;
+    }
+
+    .mega-dropdown-menu .dropdown-item {
+      font-size: 0.9rem;
+      color: #343a40;
+    }
+
+    .mega-dropdown-menu .dropdown-item:hover {
+      background-color: #e74c3c;
       color: white;
     }
 
-    .header.scrolled .mobile-nav-toggle {
-      color: black;
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .mega-dropdown-menu {
+        padding: 10px;
+      }
+
+      .mega-dropdown-menu .dropdown-header {
+        font-size: 1.2rem;
+      }
+
+      .navbar-collapse {
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+      }
+
+      .nav-link {
+        color: black !important;
+      }
+
+      .nav-item:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      .dropdown-large{
+        width: 100%;
+      }
     }
+    .dropdown-large {
+  width: auto; /* Allows the width to adjust dynamically */
+  min-width: 800px; /* Ensures a minimum width for readability */
+  padding: 1rem;
+}
+
+.dropdown-large .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic columns */
+  gap: 1rem; /* Space between columns */
+}
+
+.dropdown-large .dropdown-header {
+  font-weight: bold;
+  font-size: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Adjust positioning to avoid overflowing */
+.dropdown-menu {
+  left: auto !important;
+  right: auto !important;
+  padding: 0; /* Optional: reduces extra padding */
+  transform: none; /* Resets Bootstrap's dropdown adjustment */
+}
+
+
+
+
   </style>
 </head>
 <body>
@@ -65,30 +135,69 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
         <a href="/" class="logo d-flex align-items-center text-decoration-none">
-          <img src="{{asset('assets/img/logo.png')}}" alt="Logo" class="img-fluid me-2" style="height: 50px;">
+          <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="img-fluid me-2" style="height: 50px;">
           <h1 class="sitename mb-0 fs-4">Animation</h1>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto text-capitalize">
+          <ul class="navbar-nav ms-auto justify-content-center w-100">
             <li class="nav-item">
               <a href="/" class="nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                <li><a href="#" class="dropdown-item">Dropdown 1</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Deep Dropdown</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Deep Dropdown 1</a></li>
-                    <li><a href="#" class="dropdown-item">Deep Dropdown 2</a></li>
-                  </ul>
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <ul class="dropdown-menu dropdown-large dropdown-menu-start" aria-labelledby="servicesDropdown">
+                <li>
+                  <div class="row p-3">
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Animated Videos</h6>
+                      <ul class="list-unstyled">
+                        <li><a class="dropdown-item" href="{{route('animation-2d')}}">2D Animation</a></li>
+                        <li><a class="dropdown-item" href="{{route('animation-3d')}}">3D Animation</a></li>
+                        <li><a class="dropdown-item" href="{{route('explain-video')}}">Explainer Video</a></li>
+                        <li><a class="dropdown-item" href="{{route('motion-graphics')}}">Motion Graphics</a></li>
+                        <li><a class="dropdown-item" href="{{route('promotional_video')}}">Promotional Video</a></li>
+                        <li><a class="dropdown-item" href="{{route('stop_motion')}}">Stop Motion</a></li>
+                        <li><a class="dropdown-item" href="{{route('logo_animation')}}">Logo Animation</a></li>
+                        <li><a class="dropdown-item" href="{{route('whiteboard')}}">WhiteBoard</a></li>
+                        
+                      </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Animated Videos</h6>
+                      <ul class="list-unstyled">
+                        <li><a class="dropdown-item" href="#">2D Animation</a></li>
+                        <li><a class="dropdown-item" href="#">3D Animation</a></li>
+                        <li><a class="dropdown-item" href="#">Explainer Video</a></li>
+                        <li><a class="dropdown-item" href="#">Motion Graphics</a></li>
+                        <li><a class="dropdown-item" href="#">Promotional Video</a></li>
+                        <li><a class="dropdown-item" href="#">Stop Motion</a></li>
+                        <li><a class="dropdown-item" href="#">Logo Animation</a></li>
+                        
+                      </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Games Animation</h6>
+                      <ul class="list-unstyled">
+                        <li><a class="dropdown-item" href="#">Medical Animation</a></li>
+                        <li><a class="dropdown-item" href="#">Scientific Animation</a></li>
+                        <li><a class="dropdown-item" href="#">Educational Animation</a></li>
+                        <li><a class="dropdown-item" href="#">Animated Music Video</a></li>
+                        <li><a class="dropdown-item" href="#">3D Architectural Animation</a></li>
+                        <li><a class="dropdown-item" href="#">Commercial Animation</a></li>
+                      </ul>
+                    </div>
+                
+                  </div>
                 </li>
-              </ul> 
+              </ul>
             </li>
+            
+              
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle {{ request()->is('about') ? 'active' : '' }}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 About
@@ -137,7 +246,22 @@
         navbar.classList.remove('scrolled');
       }
     });
-  </script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const dropdowns = document.querySelectorAll('.dropdown-menu');
 
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('show.bs.dropdown', () => {
+      const rect = dropdown.getBoundingClientRect();
+      const viewportWidth = window.innerWidth;
+
+      if (rect.right > viewportWidth) {
+        dropdown.style.left = 'auto';
+        dropdown.style.right = '0';
+      }
+    });
+  });
+});
+
+  </script>
 </body>
 </html>

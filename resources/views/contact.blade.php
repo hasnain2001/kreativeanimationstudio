@@ -6,6 +6,7 @@ Contact |
 @section('main-content')
 <style>
   .hero-contact {
+    color: black;
     width: 100%;
     min-height: 150px;
     padding: 120px 0;
@@ -14,12 +15,24 @@ Contact |
     position: relative;
     background: url('{{ asset('images/2d-1.jpg') }}') center center / cover no-repeat;
   }
+  .hero-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the RGBA values for your desired shade */
+    z-index: 2;
+}
 </style>
 
 <section id="hero" class="hero-contact">
   <div class="container">
-    <h1>Get in <span>Touch</span></h1>
-    <p>We'd love to hear from you</p>
+ <div class="text-start col-md-6">
+  <h1>We'd Love to Hear from You!</h1>
+  <p>We are a top animation company that specializes in creating custom video content to connect brands with audiences. Global brands rely on us, serving a broad range of clients, from small startups to large corporations. Let’s discuss your project – no matter the difficulty, you have our support. Complete the form to begin!</p>
+ </div>
   </div>
 </section>
 

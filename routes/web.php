@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+}) ->name('home');
 Route::get('/', function () {
     return view('home');
 });
@@ -31,7 +31,15 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('/about/success-measurement', 'success')->name('success');
     Route::get('/about/project-documentation', 'project')->name('project');
     Route::get('/about/our-process', 'our_process')->name('our-process');
-
+// sevices Animated Videos   pages //
+Route::get('/2d-animation-service', 'animation_2d')->name('animation-2d');
+Route::get('/3d-animation-service', 'animation_3d')->name('animation-3d');
+Route::get('/animated-explainer-video-service', 'explain_video')->name('explain-video');
+Route::get('/motion-graphics-design-service', 'motion_graphic')->name('motion-graphics');
+Route::get('/animated-promotional-video-service', 'promotional_video')->name('promotional_video');
+Route::get('/stop-motion-animation-service', 'stop_motion')->name('stop_motion');
+Route::get('/animated-logo-design-service', 'logo_animation')->name('logo_animation');
+Route::get('/whiteboard-animation-service', 'whiteboard')->name('whiteboard');
 
 });
 
