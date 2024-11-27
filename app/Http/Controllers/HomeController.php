@@ -71,5 +71,34 @@ class HomeController extends Controller
    public function video_editing(){
       return view('animated-videos.video-editing');
    }
+   public function character_animation(){
+      return view('animated-videos.character-animation');
+   }
+   public function character_modeling(){
+      return view('animated-videos.3d-character-modeling');
+   }
+   public function sculping(){
+      return view('animated-videos.3d-sculping');
+   }
+   public function second_30(){
+      return view('animated-videos.30-seconds');
+   }
+   public function second_60(){
+      return view('animated-videos.60-seconds');
+   }
+   public function second_90(){
+      return view('animated-videos.90-seconds');
+   }
+   public function info_graphic(){
+      return view('animated-videos.info-graphics');
+   }
+   public function rotoscoping(){
+      return view('animated-videos.rotoscoping');
+   }
+   public function concept_art(){
+      return view('animated-videos.concept-art');
+   }
+   
+
 
 }

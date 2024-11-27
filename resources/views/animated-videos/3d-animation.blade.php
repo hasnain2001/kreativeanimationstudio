@@ -254,7 +254,7 @@
   <section id="hero" class="hero section dark-background">
 
     <video class="hero-bg" autoplay loop muted playsinline>
-      <source src="{{asset('video/v-1.mp4')}}" type="video/mp4">
+      <source src="{{asset('images/3d-animation/banner-video.mp4')}}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="container">
@@ -262,9 +262,9 @@
         <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
    
         </div>
-        <div class="">
-          <h1>2D Animation Video Company Capturing Hearts & Driving Sales!</h1>
-          <p>Tired of bland, forgettable marketing videos?  AFX Animators’ creative 2D animation services will transform your brand message into a captivating visual experience.</p>
+        <div class="col-lg-5   animate__animated animate__backInRight">
+          <h1 class=" card-title">3D Animation Video Company Capturing Hearts & Driving Sales!</h1>
+          <p>Tired of bland, forgettable marketing videos?  AFX Animators’ creative 3D animation services will transform your brand message into a captivating visual experience.</p>
 
             <a href="{{route('contact')}}" class="btn-get-started btn">Get Started</a>
             {{-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
@@ -432,8 +432,8 @@
       
     </div>
     </section>
-    <section style="background-color: #920063;">
-        <div class="container text-white">
+    <section style="background-color: #ffffff; color:black;">
+        <div class="container ">
             <div class="row">
               
                 <div class="col-md-6">
@@ -448,7 +448,7 @@
                         <a href="{{route('contact')}}" class="btn btn-custom">Get Started</a>
                 </div>
                 <div class=" col-md-6 ">
-                         <video class="" autoplay loop muted playsinline height="400" width="100%">
+                         <video class="" autoplay loop muted playsinline  style="height:500px" width="100%">
                         <source src="{{asset('images/3d-animation/video.mp4')}}" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>

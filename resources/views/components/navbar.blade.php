@@ -118,7 +118,7 @@
 }
 .dropdown-large .dropdown-item {
     font-size: 10px; /* Adjusts the font size of links */
-    color: #333;     /* Default link color */
+    color: #000000;     /* Default link color */
     text-decoration: none; /* Removes underline from links */
 }
 
@@ -163,23 +163,32 @@
               <ul class="dropdown-menu dropdown-large dropdown-menu-start" aria-labelledby="servicesDropdown">
                 <li>
                   <div class="row p-3">
-                    <div class="col-md-4">
-                      <h6 class="dropdown-header">Animated Videos</h6>
-                      <ul class="list-unstyled">
-                        <li><a class="dropdown-item" href="{{route('animation-2d')}}">2D Animation</a></li>
-                        <li><a class="dropdown-item" href="{{route('animation-3d')}}">3D Animation</a></li>
-                        <li><a class="dropdown-item" href="{{route('explain-video')}}">Explainer Video</a></li>
-                        <li><a class="dropdown-item" href="{{route('motion-graphics')}}">Motion Graphics</a></li>
-                        <li><a class="dropdown-item" href="{{route('promotional_video')}}">Promotional Video</a></li>
-                        <li><a class="dropdown-item" href="{{route('stop_motion')}}">Stop Motion</a></li>
-                        <li><a class="dropdown-item" href="{{route('logo_animation')}}">Logo Animation</a></li>
-                        <li><a class="dropdown-item" href="{{route('whiteboard')}}">WhiteBoard</a></li>
-                        <li><a class="dropdown-item" href="{{route('storyboard')}}">storyboard</a></li>
-                        <li><a class="dropdown-item" href="{{route('frame_by_frame')}}">frame by frame</a></li>
-                        <li><a class="dropdown-item" href="{{route('video-editing')}}">Videp Editing</a></li>
-                        
-                      </ul>
-                    </div>
+  <div class="col-md-4">
+  <h6 class="dropdown-header">Animated Videos</h6>
+  <ul class="list-unstyled text-capitalize">
+  <li><a class="dropdown-item" href="{{route('animation-2d')}}">2D Animation</a></li>
+  <li><a class="dropdown-item" href="{{route('animation-3d')}}">3D Animation</a></li>
+  <li><a class="dropdown-item" href="{{route('explain-video')}}">Explainer Video</a></li>
+  <li><a class="dropdown-item" href="{{route('motion-graphics')}}">Motion Graphics</a></li>
+  <li><a class="dropdown-item" href="{{route('promotional_video')}}">Promotional Video</a></li>
+  <li><a class="dropdown-item" href="{{route('stop_motion')}}">Stop Motion</a></li>
+  <li><a class="dropdown-item" href="{{route('logo_animation')}}">Logo Animation</a></li>
+  <li><a class="dropdown-item" href="{{route('whiteboard')}}">WhiteBoard</a></li>
+  <li><a class="dropdown-item" href="{{route('storyboard')}}">storyboard</a></li>
+  <li><a class="dropdown-item" href="{{route('frame_by_frame')}}">frame by frame</a></li>
+  <li><a class="dropdown-item" href="{{route('video-editing')}}">Video Editing</a></li>
+  <li><a class="dropdown-item" href="{{route('character_animation')}}">character animation</a></li>
+  <li><a class="dropdown-item" href="{{route('character_modeling')}}"> 3d character modeling</a></li>
+  <li><a class="dropdown-item" href="{{route('3d-sculping')}}"> 3d sculping</a></li>
+  <li><a class="dropdown-item" href="{{route('30-seconds')}}"> 30 seconds video</a></li>      
+  <li><a class="dropdown-item" href="{{route('60-seconds')}}"> 60 seconds video</a></li>     
+  <li><a class="dropdown-item" href="{{route('90-seconds')}}"> 90 seconds video</a></li>   
+  <li><a class="dropdown-item" href="{{route('info-graphics')}}">info graphics</a></li>  
+  <li><a class="dropdown-item" href="{{route('rotoscoping')}}">rotoscoping</a></li>  
+  <li><a class="dropdown-item" href="{{route('concept-art')}}">concept art</a></li>            
+  </ul>
+  </div>
+               
                     <div class="col-md-4">
                       <h6 class="dropdown-header">Animated Videos</h6>
                       <ul class="list-unstyled">

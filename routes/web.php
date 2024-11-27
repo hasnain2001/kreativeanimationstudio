@@ -47,6 +47,15 @@ Route::get('/whiteboard-animation-service', 'whiteboard')->name('whiteboard');
 Route::get('/storyboard-animation-service', 'storyboard')->name('storyboard');
 Route::get('/frame-by-frame-animation-service', 'frame_by_frame')->name('frame_by_frame');
 Route::get('/video-editing-service', 'video_editing')->name('video-editing');
+Route::get('/character-animation-service', 'character_animation')->name('character_animation');
+Route::get('/3d-character-modeling-service', 'character_modeling')->name('character_modeling');
+Route::get('/3d-sculping-service', 'sculping')->name('3d-sculping');
+Route::get('/30-seconds-video-making-service', 'second_30')->name('30-seconds');
+Route::get('/60-seconds-video-making-service', 'second_60')->name('60-seconds');
+Route::get('/90-seconds-video-making-service', 'second_90')->name('90-seconds');
+Route::get('/info-graphics-video-service', 'info_graphic')->name('info-graphics');
+Route::get('/rotoscoping-service', 'rotoscoping')->name('rotoscoping');
+Route::get('/concept-art-service', 'concept_art')->name('concept-art');
 
 });
 

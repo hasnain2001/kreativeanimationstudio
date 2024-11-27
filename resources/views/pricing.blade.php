@@ -26,9 +26,9 @@ Pricing |
 <section id="pricing" class="pricing section">
 
     <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Pricing</h2>
-      <div><span>Check Our</span> <span class="description-title">Pricing</span></div>
+    <div class="container section-title text-center" data-aos="fade-up">
+      {{-- <h2>Pricing</h2> --}}
+      <div><span>Pricing</span></div>
     </div><!-- End Section Title -->
 
     <div class="container">

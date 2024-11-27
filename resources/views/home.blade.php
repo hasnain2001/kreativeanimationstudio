@@ -216,13 +216,13 @@
         </div>
 
         <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
-          <h1>Tired of Snooze Fests?
+          <h1 class="animate__animated animate__backInRight">Tired of Snooze Fests?
               AFX Video Animation Company Will
               
              <span>  Blow Your Mind!</span></h1>
           <p>We are team of talented designers making websites with Bootstrap</p>
           <div class="d-flex">
-            <a href="{{route('contact')}}" class="btn-get-started">Get Started</a>
+            <a href="{{route('contact')}}" class="btn btn-get-started">Get Started</a>
             {{-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
           </div>
         </div>

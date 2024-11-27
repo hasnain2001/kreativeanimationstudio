@@ -7,9 +7,9 @@ header("X-Robots-Tag:index, follow");?>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title> @yield('title') </title>
-  <meta name="description" content="Explore a wide range of premium leather jackets for men and women. Shop stylish, durable outerwear and elevate your fashion with top-quality designs.">
+  <meta name="description" content="@yield('description')">
 
-  <meta name="keywords" content="leather jackets, premium jackets, men's jackets, women's jackets, stylish outerwear, durable jackets, fashion, leatherwear">
+  <meta name="keywords" content="@yield('keywords')">
   
   <meta name="author" content="Premium Leather Style">
   <meta name="robots" content="index, follow">

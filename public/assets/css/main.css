@@ -572,7 +572,7 @@ section,
   margin: 0 0 20px 0;
   font-size: 25px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 30px;
   color: color-mix(in srgb, var(--heading-color), transparent 30%);
 }
 
@@ -585,7 +585,7 @@ section,
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: 5px 0 30px 0;
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 400;
 }
 
@@ -637,14 +637,19 @@ section,
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+
+
+    .hero {
+      height: 60vh; /* Adjust height for smaller screens */
+    }
   .hero h1 {
-    font-size: 28px;
+    font-size: 20px;
     line-height: 36px;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 24px;
     margin-bottom: 30px;
   }

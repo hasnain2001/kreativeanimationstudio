@@ -262,7 +262,7 @@
         <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
    
         </div>
-        <div class="">
+        <div class="col-lg-5">
           <h1>2D Animation Video Company Capturing Hearts & Driving Sales!</h1>
           <p>Tired of bland, forgettable marketing videos?  AFX Animators’ creative 2D animation services will transform your brand message into a captivating visual experience.</p>
 
