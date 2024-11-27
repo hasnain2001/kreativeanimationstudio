@@ -253,7 +253,7 @@ Captivate Audiences with Motion Graphics Design Services
   <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
     <video class="hero-bg" autoplay loop muted playsinline>
-        <source src="{{asset('video/v-1.mp4')}}" type="video/mp4">
+        <source src="{{asset('images/motion-graphic/motion-graphic.mp4')}}" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     <div class="container">
@@ -261,7 +261,7 @@ Captivate Audiences with Motion Graphics Design Services
         <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
    
         </div>
-        <div class="">
+        <div class="col-md-5">
           <h1>Motion Graphics Company Designing Attention-Grabbing Awesomeness!</h1>
           <p>Stop settling for static visuals. Attract your audience with dynamic, engaging motion graphic animation services by AFX Animators.</p>
 

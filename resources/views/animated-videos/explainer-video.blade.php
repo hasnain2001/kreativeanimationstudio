@@ -254,7 +254,7 @@ Animated Explainer Video Services - Engaging Your Audiences|
   <section id="hero" class="hero section dark-background">
 
     <video class="hero-bg" autoplay loop muted playsinline>
-        <source src="{{asset('video/v-1.mp4')}}" type="video/mp4">
+        <source src="{{asset('images/explainer-video/explainer.mp4')}}" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     <div class="container">

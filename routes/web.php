@@ -36,27 +36,43 @@ Route::controller(HomeController::class)->group(function(){
 });
 // sevices Animated Videos   pages //
 Route::controller(HomeController::class)->prefix('service')->group(function(){
-Route::get('/2d-animation-service', 'animation_2d')->name('animation-2d');
-Route::get('/3d-animation-service', 'animation_3d')->name('animation-3d');
-Route::get('/animated-explainer-video-service', 'explain_video')->name('explain-video');
-Route::get('/motion-graphics-design-service', 'motion_graphic')->name('motion-graphics');
-Route::get('/animated-promotional-video-service', 'promotional_video')->name('promotional_video');
-Route::get('/stop-motion-animation-service', 'stop_motion')->name('stop_motion');
-Route::get('/animated-logo-design-service', 'logo_animation')->name('logo_animation');
-Route::get('/whiteboard-animation-service', 'whiteboard')->name('whiteboard');
-Route::get('/storyboard-animation-service', 'storyboard')->name('storyboard');
-Route::get('/frame-by-frame-animation-service', 'frame_by_frame')->name('frame_by_frame');
-Route::get('/video-editing-service', 'video_editing')->name('video-editing');
-Route::get('/character-animation-service', 'character_animation')->name('character_animation');
-Route::get('/3d-character-modeling-service', 'character_modeling')->name('character_modeling');
-Route::get('/3d-sculping-service', 'sculping')->name('3d-sculping');
-Route::get('/30-seconds-video-making-service', 'second_30')->name('30-seconds');
-Route::get('/60-seconds-video-making-service', 'second_60')->name('60-seconds');
-Route::get('/90-seconds-video-making-service', 'second_90')->name('90-seconds');
-Route::get('/info-graphics-video-service', 'info_graphic')->name('info-graphics');
-Route::get('/rotoscoping-service', 'rotoscoping')->name('rotoscoping');
-Route::get('/concept-art-service', 'concept_art')->name('concept-art');
+Route::get('/2d-animation', 'animation_2d')->name('animation-2d');
+Route::get('/3d-animation', 'animation_3d')->name('animation-3d');
+Route::get('/animated-explainer-video', 'explain_video')->name('explain-video');
+Route::get('/motion-graphics-design', 'motion_graphic')->name('motion-graphics');
+Route::get('/animated-promotional-video', 'promotional_video')->name('promotional_video');
+Route::get('/stop-motion-animation', 'stop_motion')->name('stop_motion');
+Route::get('/animated-logo-design', 'logo_animation')->name('logo_animation');
+Route::get('/whiteboard-animation', 'whiteboard')->name('whiteboard');
+Route::get('/storyboard-animation', 'storyboard')->name('storyboard');
+Route::get('/frame-by-frame-animation', 'frame_by_frame')->name('frame_by_frame');
+Route::get('/video-editing', 'video_editing')->name('video-editing');
+Route::get('/character-animation', 'character_animation')->name('character_animation');
+Route::get('/3d-character-modeling', 'character_modeling')->name('character_modeling');
+Route::get('/3d-sculping', 'sculping')->name('3d-sculping');
+Route::get('/30-seconds-video-making', 'second_30')->name('30-seconds');
+Route::get('/60-seconds-video-making', 'second_60')->name('60-seconds');
+Route::get('/90-seconds-video-making', 'second_90')->name('90-seconds');
+Route::get('/info-graphics-video', 'info_graphic')->name('info-graphics');
+Route::get('/rotoscoping', 'rotoscoping')->name('rotoscoping');
+Route::get('/concept-art', 'concept_art')->name('concept-art');
 
 });
+
+// Industry Animation  pages  route //
+Route::controller(HomeController::class)->prefix('service')->group(function(){
+    Route::get('/medical-animation', 'medical_health')->name('medical_health');
+    Route::get('/scientific-animation', 'scientific_animation')->name('scientific_animation');
+    Route::get('/educational-animation', 'educational_animation')->name('educational-animation');
+    Route::get('/animated-music-video', 'animated_music_video')->name('animated_music_video');
+    Route::get('/3d-architectural-animation', 'architectural_animation')->name('3d-architectural-animation');
+    Route::get('/commercial-animation', 'commercial_animation')->name('commercial-animation'); 
+ 
+
+   });
+   Route::controller(HomeController::class)->prefix('services')->group(function(){
+    Route::get('/game-animation', 'game_animation')->name('game-animation'); 
+    Route::get('/game-character-animation', 'game_character_animation')->name('game-character-animation'); 
+   });
 
 require __DIR__.'/auth.php';

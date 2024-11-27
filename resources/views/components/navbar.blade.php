@@ -190,28 +190,23 @@
   </div>
                
                     <div class="col-md-4">
-                      <h6 class="dropdown-header">Animated Videos</h6>
-                      <ul class="list-unstyled">
-                        <li><a class="dropdown-item" href="#">2D Animation</a></li>
-                        <li><a class="dropdown-item" href="#">3D Animation</a></li>
-                        <li><a class="dropdown-item" href="#">Explainer Video</a></li>
-                        <li><a class="dropdown-item" href="#">Motion Graphics</a></li>
-                        <li><a class="dropdown-item" href="#">Promotional Video</a></li>
-                        <li><a class="dropdown-item" href="#">Stop Motion</a></li>
-                        <li><a class="dropdown-item" href="#">Logo Animation</a></li>
-                        
-                      </ul>
+                      <h6 class="dropdown-header">Industry Animation </h6>
+    <ul class="list-unstyled text-capitalize">
+      <li><a class="dropdown-item" href="{{route('medical_health')}}">Medical Animation</a></li>
+      <li><a class="dropdown-item" href="{{route('scientific_animation')}}">Scientific Animation</a></li>
+      <li><a class="dropdown-item" href="{{route('educational-animation')}}">Educational Animation</a></li>
+      <li><a class="dropdown-item" href="{{route('animated_music_video')}}">Animated Music Video</a></li>
+      <li><a class="dropdown-item" href="{{route('3d-architectural-animation')}}">3D Architectural Animation</a></li>
+      <li><a class="dropdown-item" href="{{route('commercial-animation')}}">Commercial Animation</a></li>
+
+    </ul>
                     </div>
                     <div class="col-md-4">
                       <h6 class="dropdown-header">Games Animation</h6>
-                      <ul class="list-unstyled">
-                        <li><a class="dropdown-item" href="#">Medical Animation</a></li>
-                        <li><a class="dropdown-item" href="#">Scientific Animation</a></li>
-                        <li><a class="dropdown-item" href="#">Educational Animation</a></li>
-                        <li><a class="dropdown-item" href="#">Animated Music Video</a></li>
-                        <li><a class="dropdown-item" href="#">3D Architectural Animation</a></li>
-                        <li><a class="dropdown-item" href="#">Commercial Animation</a></li>
-                      </ul>
+      <ul class="list-unstyled text-capitalize">
+        <li><a class="dropdown-item" href="{{route('game-animation')}}">Game Animation</a></li>
+        <li><a class="dropdown-item" href="{{route('game-character-animation')}}">Game character Animation</a></li>
+      </ul>
                     </div>
                 
                   </div>

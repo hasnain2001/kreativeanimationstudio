@@ -41,9 +41,9 @@ header("X-Robots-Tag:index, follow");?>
 
     @include('components.navbar')
 
-
+<main class="">
     @yield('main-content')
-  
+  </main>
   
 
   

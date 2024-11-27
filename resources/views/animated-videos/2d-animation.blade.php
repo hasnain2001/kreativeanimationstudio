@@ -254,7 +254,7 @@
   <section id="hero" class="hero section dark-background">
 
     <video class="hero-bg" autoplay loop muted playsinline>
-      <source src="{{asset('video/v-1.mp4')}}" type="video/mp4">
+      <source src="{{asset('images/2d-animation/2d-animation.mp4')}}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="container">

@@ -99,6 +99,40 @@ class HomeController extends Controller
       return view('animated-videos.concept-art');
    }
    
+    //Industry Animation//
+
+    public function medical_health(){
+      return view('Industry-Animation.medical-health');
+   }
+   public function scientific_animation(){
+      return view('Industry-Animation.scientific-animation');
+   }
+   
+   public function educational_animation(){
+      return view('Industry-Animation.educational-animation');
+   }
+   public function animated_music_video(){
+      return view('Industry-Animation.animated-music-video');
+   }
+   public function architectural_animation(){
+      return view('Industry-Animation.3d-architectural-animation');
+   }
+   
+   public function commercial_animation(){
+      return view('Industry-Animation.commercial-animation');
+   }
+    
+    //Industry Animation//
+      
+   public function game_animation(){
+      return view('games-Animation.game-animation');
+   }
+   public function game_character_animation(){
+      return view('games-Animation.game-character-animation');
+   }
+   
+
+   
 
 
 }
