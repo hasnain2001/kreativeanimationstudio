@@ -1,8 +1,11 @@
 @extends('welcome')
-@section('title')
-Contact |
-@endsection
+@section('title', 'Contact Us for Animation Services | Get in Touch Today')
 
+@section('description', 'Interested in our animation services? Contact us today to discuss your project and learn more about how we can help bring your ideas to life.')
+
+@section('keywords', 'Game Animation Experts | Professional Video Animation Services USA | Lifelike Game Character Animations')
+
+@section('robots', 'index, follow')
 @section('main-content')
 <style>
   .hero-contact {

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,17 +20,34 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 });
+
+Route::controller(BlogController::class)->prefix('dashboard')->name('dashboard.')->group(function () {
+    Route::get('/blog',  'blogs_show')->name('index');
+    Route::get('/blog/create',  'create')->name('blog.create');
+    Route::post('/blog/store', 'store')->name('blog.store');
+    Route::get('/blog/{id}/edit', 'edit')->name('blog.edit');
+    Route::post('/admin/Blog/update/{id}', 'update')->name('Blog.update');
+    Route::delete('/admin/Blog/{id}', [BlogController::class, 'destroy'])->name('blog.delete');
+    Route::post('/blog/deleteSelected', [BlogController::class, 'deleteSelected'])->name('blog.deleteSelected');
+    Route::delete('/blog/bulk-delete', [BlogController::class, 'deleteSelected'])->name('blog.bulkDelete');
+});
+
 Route::controller(HomeController::class)->group(function(){
     Route::get('/contact', 'contact')->name('contact');
     Route::get('/pricing', 'pricing')->name('pricing');
     Route::get('/portfolio', 'portfolio')->name('portfolio');
+    Route::get('/About', 'About')->name('About');
+    Route::get('/Terms-And-Condition', 'Terms')->name('Terms');
+    Route::get('/projects', 'projects')->name('projects');
+    Route::get('/privacy-policy', 'privacy_policy')->name('privacy-policy');
     // about us pages //
     Route::get('/about/insiht', 'insight')->name('insight');
     Route::get('/about/Client-Onboarding-Process', 'client')->name('client');
     Route::get('/about/Our-Quality-Management', 'management')->name('management');
-    Route::get('/about/success-measurement', 'success')->name('success');
-    Route::get('/about/project-documentation', 'project')->name('project');
+    Route::get('/about/success-measurement', 'success_measurement')->name('success');
+    Route::get('/about/project-documentation', 'project_documentation')->name('project');
     Route::get('/about/our-process', 'our_process')->name('our-process');
 
 

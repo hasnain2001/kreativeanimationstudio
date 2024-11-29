@@ -1,34 +1,77 @@
 @extends('welcome')
 
-@section('title')
-Pricing |
-@endsection
+@section('title', 'Premium Game Character Animation Services')
+
+@section('description', 'AFX Animators creates lifelike game character animations, enhancing your game projects with expert craftsmanship and stunning visuals.')
+
+@section('keywords', 'Game Animation Experts | Professional Video Animation Services USA | Lifelike Game Character Animations')
+
+@section('robots', 'index, follow')
 
 @section('main-content')
 <style>
-    .hero-contact {
-    width: 100%;
-    min-height: 150px;
-    padding: 120px 0;
-    display: flex;
-    align-items: center;
-    position: relative;
-    background: url('{{ asset('images/2d-1.jpg') }}') center center / cover no-repeat;
+.hero-contact {
+  width: 100%;
+  min-height: 150px;
+  padding: 120px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  position: relative;
+  background: url('{{ asset('images/2d-1.jpg') }}') center center / cover no-repeat;
+  color: #fff; /* Ensure text is readable */
+  text-align: center; /* Center-align text */
+  z-index: 0; /* Ensure proper layering */
+  overflow: hidden; /* Prevent waves from overflowing */
+}
+
+.hero-contact::before {
+  content: '';
+  position: absolute;
+  inset: 0; /* Shortcut for top, right, bottom, left: 0 */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensures the overlay is above background but below content */
+}
+
+.hero-contact::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0) 70%);
+  animation: wave 8s infinite linear;
+  z-index: 2; /* Place waves above the background */
+  opacity: 0.5; /* Subtle wave effect */
+}
+
+/* Keyframes for wave animation */
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
+  50% {
+    transform: translate(-45%, -55%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
 </style>
 
 <section id="hero" class="hero-contact">
-    <div class="container">
-    
-    </div>
-  </section>
+  <div class="container">
+    <h1>Pricing</h1>
+  </div>
+</section>
 <!-- Pricing Section -->
 <section id="pricing" class="pricing section">
 
     <!-- Section Title -->
     <div class="container section-title text-center" data-aos="fade-up">
       {{-- <h2>Pricing</h2> --}}
-      <div><span>Pricing</span></div>
+      {{-- <div><span>Pricing</span></div> --}}
     </div><!-- End Section Title -->
 
     <div class="container">

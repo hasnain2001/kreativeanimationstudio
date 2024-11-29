@@ -253,18 +253,24 @@ Promotional Video Making Service - Creating Engaging Videos
             max-width: 100%;
             height: 300px;
         }
-        .section-1{
-            background-image: url('{{asset('images/promotional-video/baclground.png')}}') ; 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    min-height: 100vh; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-        }
+.section-1{
+background-image: url('{{asset('images/promotional-video/baclground.png')}}') ; 
+background-size: cover; 
+background-position: center; 
+background-repeat: no-repeat; 
+min-height: 100vh; 
+display: flex; 
+align-items: center; 
+justify-content: center;
+}
 
-
+.section-footer{
+  background-color: #01a7a6;
+  color:white;
+}
+.section-footer h4 {
+color: black;
+}
 </style>
   <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
@@ -313,10 +319,10 @@ Promotional Video Making Service - Creating Engaging Videos
     <div class="row">
         <div class=" col-md-6 ">
             <h1>Promotional Video Agency Offering High-Quality Promotional Videos!</h1>
-<p style="font-size: 12px;">AFX Animators, your leading promotional video agency, creates creative animated promotional videos that bring your idea to life, whether it’s an animated explainer video, product demo, or brand story. We recognize that each brand has a unique story to tell, and our professionals create unique narratives that connect with your target audience, increasing engagement and conversion. 
+<p style="font-size: 14px;">AFX Animators, your leading promotional video agency, creates creative animated promotional videos that bring your idea to life, whether it’s an animated explainer video, product demo, or brand story. We recognize that each brand has a unique story to tell, and our professionals create unique narratives that connect with your target audience, increasing engagement and conversion. 
    </p>
    <br>
-    <p style="font-size: 12px;">We prioritize quality in our promotional video creation services, employing cutting-edge animation techniques and tools to create visually stunning videos that leave a lasting impact. From concept to final delivery, AFX Animators oversees the entire production process, assuring a smooth experience and a polished result. AFX Animators offers amazing, customized promotional video production services that will set you apart.</p>
+    <p style="font-size: 14px;">We prioritize quality in our promotional video creation services, employing cutting-edge animation techniques and tools to create visually stunning videos that leave a lasting impact. From concept to final delivery, AFX Animators oversees the entire production process, assuring a smooth experience and a polished result. AFX Animators offers amazing, customized promotional video production services that will set you apart.</p>
                 <a href="{{route('contact')}}" class="btn-custom btn">Get Started</a>
         </div>
         <div class="col-md-6">
@@ -471,7 +477,7 @@ Promotional Video Making Service - Creating Engaging Videos
 
     </div>
     </section>
-        <section style="background-color: #01a7a6;">
+        <section class="section-footer" style="">
             <div class="container">
                 <!-- Header Section -->
                 <div class="header-2d">

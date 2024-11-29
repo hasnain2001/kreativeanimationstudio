@@ -1,0 +1,146 @@
+    /* General Header Styles */
+    .header {
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        background-color: transparent;
+  
+      }
+  
+      .header.scrolled {
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+  
+      /* Navbar Styles */
+      .navbar {
+        transition: background-color 0.3s ease;
+        background-color: transparent;
+  
+      }
+  
+      .navbar.scrolled {
+        background-color: white;
+      }
+  
+      /* Nav-link Styles */
+      .nav-link {
+        color: white !important;
+        transition: color 0.3s ease;
+      }
+  
+      .header.scrolled .nav-link {
+        color: black !important;
+      }
+  
+      /* Active Link */
+      .nav-link.active {
+        font-weight: bold;
+        color: #fe5b36 !important;
+      }
+  
+      /* Mega Dropdown Menu */
+      .mega-dropdown-menu {
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+      }
+  
+      .mega-dropdown-menu .dropdown-header {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #e74c3c;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #e74c3c;
+      }
+  
+      .mega-dropdown-menu .dropdown-item {
+        font-size: 0.9rem;
+        color: #343a40;
+      }
+  
+      .mega-dropdown-menu .dropdown-item:hover {
+        background-color: #e74c3c;
+        color: white;
+      }
+  
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .mega-dropdown-menu {
+          padding: 10px;
+        }
+  
+        .mega-dropdown-menu .dropdown-header {
+          font-size: 1.2rem;
+        }
+  
+        .navbar-collapse {
+          background-color: white;
+          padding: 15px;
+          border-radius: 8px;
+        }
+  
+        .nav-link {
+          color: black !important;
+        }
+  
+        .nav-item:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        .dropdown-large{
+          width: 100%;
+        }
+      }
+      .dropdown-large {
+    width: auto; /* Allows the width to adjust dynamically */
+    min-width: 800px; /* Ensures a minimum width for readability */
+    padding: 1rem;
+  }
+  
+  .dropdown-large .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic columns */
+    gap: 1rem; /* Space between columns */
+  }
+  
+  .dropdown-large .dropdown-header {
+    font-weight: bolder ;
+    font-size: 19px;
+    margin-bottom: 0.5rem;
+    color: #fe5b36;
+  }
+  .dropdown-large .dropdown-item {
+      font-size: 15px; /* Adjusts the font size of links */
+      color: #000000;     /* Default link color */
+      text-decoration: none; /* Removes underline from links */
+      font-weight: 500;
+  
+  }
+  
+  .dropdown-large .dropdown-item:hover {
+      color: #007bff;  /* Highlight color on hover */
+    
+  }
+  
+  /* Adjust positioning to avoid overflowing */
+  .dropdown-menu {
+  
+    color: #fff; /* Makes text white for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow around the menu */
+    padding: 0; /* Optional: reduces extra padding */
+    transform: none !important; /* Resets Bootstrap's dropdown adjustments */
+    left: auto !important;
+    right: auto !important;
+  
+  }
+
+  
+  #btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 6;
+    background-color: #e74c3c;
+    
+  }
+  

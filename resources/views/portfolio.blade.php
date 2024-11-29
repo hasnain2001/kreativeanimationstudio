@@ -1,8 +1,9 @@
 @extends('welcome')
 
-@section('title')
-Portfolio |
-@endsection
+@section('title', 'Animation Portfolio | Bringing Your Ideas to Life')
+@section('description','Discover a world of imagination and creativity with our animation portfolio. Our talented team brings your ideas to life with stunning visuals and storytelling.')
+@section('keywords', 'Animators | Creative Video Animation Services USA')
+@section('robots','index, follow')
 
 @section('main-content')
 <style>

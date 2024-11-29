@@ -461,7 +461,7 @@ AFX Animators, the expert game character animation maker, delivers captivating a
       
     </div>
     </section>
-    <section style="background-color:#3b2850; color:rgb(255, 255, 255);">
+    <section style="background-color:#ffffff; color:rgb(0, 0, 0);">
     <div class="container ">
     <div class="row">
     

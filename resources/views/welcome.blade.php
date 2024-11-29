@@ -32,35 +32,36 @@ header("X-Robots-Tag:index, follow");?>
   <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/page.css')}}">
-
-
-
+<link rel="stylesheet" href="{{asset('assets/css/navbar.css')}}">
+<style>
+    .dropdown-large{
+    position: relative;
+    background: url('{{asset('images/1.png')}}') no-repeat center center;
+    z-index: 6; /* Ensures the overlay appears behind the text */
+    background-size: cover; /* Ensures the image covers the entire dropdown */
+  }
+</style>
 </head>
 
 <body class="">
 
     @include('components.navbar')
 
-<main class="">
+<main id="main " class="main">
     @yield('main-content')
   </main>
   
 
-  
-
-
+     
+ 
   @include('components.footer')
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-{{-- 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-  <!-- Vendor JS Files --> --}}
+ 
 
   <!-- Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
   <script src="{{asset('bootstrap-5.0.2/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('assets/js/navbar,js')}}"></script>
 
 </body>
 

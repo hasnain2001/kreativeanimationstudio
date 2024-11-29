@@ -6,198 +6,7 @@
 
 @section('main-content')
 <style>
-/*--------------------------------------------------------------
-# hero-animation Section
---------------------------------------------------------------*/
-.hero-animation {
-  width: 100%;
-  min-height: 70vh;
-  position: relative;
-  padding: 120px 0 120px 0;
-  display: flex;
-  align-items: center;
-}
 
-.hero-animation .hero-animation-bg {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero-animation:before {
-  content: "";
-  background: rgba(17, 17, 17, 0.541);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-.hero-animation .container {
-  position: relative;
-  z-index: 3;
-}
-
-.hero-animation h1 {
-  margin: 0 0 20px 0;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 56px;
-  color: color-mix(in srgb, var(--heading-color), transparent 30%);
-}
-
-.hero-animation h1 span {
- 
-  color: var(--heading-color);
-  border-bottom: 4px solid var(--accent-color);
-}
-
-.hero-animation p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin: 5px 0 30px 0;
-  font-size: 22px;
-  font-weight: 400;
-}
-
-.hero-animation .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-family: var(--heading-font);
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 28px 12px 28px;
-  border-radius: 50px;
-  transition: 0.5s;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-}
-
-.hero-animation .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-}
-
-.hero-animation .btn-watch-video {
-  font-size: 16px;
-  transition: 0.5s;
-  margin-left: 25px;
-  color: var(--default-color);
-  font-weight: 600;
-}
-
-.hero-animation .btn-watch-video i {
-  color: var(--accent-color);
-  font-size: 32px;
-  transition: 0.3s;
-  line-height: 0;
-  margin-right: 8px;
-}
-
-.hero-animation .btn-watch-video:hover {
-  color: var(--accent-color);
-}
-
-.hero-animation .btn-watch-video:hover i {
-  color: color-mix(in srgb, var(--accent-color), transparent 15%);
-}
-
-.hero-animation .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
-}
-
-@media (max-width: 640px) {
-  .hero-animation h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .hero-animation p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-
-  .hero-animation .btn-get-started,
-  .hero-animation .btn-watch-video {
-    font-size: 13px;
-  }
-}
-
-.hero-animation .hero-animation-waves {
-  display: block;
-  width: 100%;
-  height: 60px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 3;
-}
-
-.hero-animation .wave1 use {
-  animation: move-forever1 10s linear infinite;
-  animation-delay: -2s;
-  fill: var(--default-color);
-  opacity: 0.6;
-}
-
-.hero-animation .wave2 use {
-  animation: move-forever2 8s linear infinite;
-  animation-delay: -2s;
-  fill: var(--default-color);
-  opacity: 0.4;
-}
-
-.hero-animation .wave3 use {
-  animation: move-forever3 6s linear infinite;
-  animation-delay: -2s;
-  fill: var(--default-color);
-}
-
-@keyframes move-forever1 {
-  0% {
-    transform: translate(85px, 0%);
-  }
-
-  100% {
-    transform: translate(-90px, 0%);
-  }
-}
-
-@keyframes move-forever2 {
-  0% {
-    transform: translate(-90px, 0%);
-  }
-
-  100% {
-    transform: translate(85px, 0%);
-  }
-}
-
-@keyframes move-forever3 {
-  0% {
-    transform: translate(-90px, 0%);
-  }
-
-  100% {
-    transform: translate(85px, 0%);
-  }
-}
-
-@keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(-10px);
-  }
-}
 
 
   .content h4{
@@ -248,8 +57,14 @@
             height: auto;
         }
 
+    
 
+    .slide-text {
+      font-size: 24px;
+      animation: slideInFromLeft 1.8s ease-out;
+    }
 </style>
+
   <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
 
@@ -263,8 +78,8 @@
    
         </div>
         <div class="col-lg-5">
-          <h1>2D Animation Video Company Capturing Hearts & Driving Sales!</h1>
-          <p>Tired of bland, forgettable marketing videos?  AFX Animators’ creative 2D animation services will transform your brand message into a captivating visual experience.</p>
+          <h1 class="animate__animated  animate__backInRight">2D Animation Video Company Capturing Hearts & Driving Sales!</h1>
+          <p class="animate__animated  animate__backInUp">Tired of bland, forgettable marketing videos?  AFX Animators’ creative 2D animation services will transform your brand message into a captivating visual experience.</p>
 
             <a href="{{route('contact')}}" class="btn-get-started btn">Get Started</a>
             {{-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
@@ -297,14 +112,14 @@
 <div class="container">
     <div class="row">
         <div class=" col-md-6 ">
-            <h1>Our 2D Animation Video Makers Breathe Life into Your Brand Message!</h1>
-            <p>At AFX, we create 2D animations to capture and hold the attention of your audience. Our 2D animators combine realistic elements with emotions to evoke laughter, singing, or the intended message in your audience. Our main objective is to create an animated video that reflects your specific desires. 
+            <h1 class="animate__animated  animate__backInRight">Our 2D Animation Video Makers Breathe Life into Your Brand Message!</h1>
+            <p class="animate__animated  animate__backInUp">At AFX, we create 2D animations to capture and hold the attention of your audience. Our 2D animators combine realistic elements with emotions to evoke laughter, singing, or the intended message in your audience. Our main objective is to create an animated video that reflects your specific desires. 
                 We are the go-to 2D animation service providers throughout the USA, handling everything from characters to creatures, props to VFX, and music background. Our clients consider us their top 2D animation creators because of the high level of detailing and quality of our video animations.
                 </p>
                 <a href="{{route('contact')}}" class="btn-custom btn">Get Started</a>
         </div>
         <div class="col-md-6">
-     <img src="{{asset('assets/img/details-1.png')}}" alt="" srcset="" class=" img-fluid" >
+     <img src="{{asset('images/2d-animation/img-1.png')}}" alt="" srcset="" class="" height="300" >
         </div>
     </div>
   
@@ -318,8 +133,8 @@
     <!-- Section Title -->
     <div class="container " data-aos="fade-up">
         <div class=" text-center">
-            <h2 class=" card-title">See What's Possible With Our Portfolio of 2D Masterpieces!</h2>
-            <p>Check out our AFX Animators’ portfolio of professional 2D animation services. From appealing advertisements to engaging Animated Explainer Videos, discover how our animations have helped brands like yours stand out and make a lasting impact.</p>
+            <h2 class=" card-title animate__animated animate__zoomIn">See What's Possible With Our Portfolio of 2D Masterpieces!</h2>
+            <p class=" animate__animated animate__zoomIn">Check out our AFX Animators’ portfolio of professional 2D animation services. From appealing advertisements to engaging Animated Explainer Videos, discover how our animations have helped brands like yours stand out and make a lasting impact.</p>
         </div>
     </div><!-- End Section Title -->
 
@@ -406,7 +221,7 @@
 <section style="background-color: #ffc6ba; padding: 20px;">
     <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
         <div>
-            <span style="font-size: 1.5em; font-weight: bold;">Ready to Wow Your Audience?</span>
+            <span style="font-size: 1.5em; font-weight: bold; " class="animate__animated animate__slideInLeft">Ready to Wow Your Audience?</span>
             <p>Contact us now to experience our professional 2D animation services!</p>
         </div>
         <a href="{{route('contact')}}" class="btn btn-custom" style="margin-left: 20px;">Message Us</a>
@@ -421,10 +236,10 @@
              
             </div>
             <div class="col-md-6">
-                <h1>Why Do You Need An Outstanding 2D Animation Designer?</h1>
-                <p>2D animation production services remain a classic foundation in the field of visual storytelling, providing endless opportunities for artistic innovation and storytelling complexity. Its lasting appeal and flexibility make it a top choice for infusing characters, settings, and ideas with energy and involvement. Whether you aim to entertain, educate, or inspire, 2D character animation service is a strong tool for getting your message across effectively and meaningfully.               
+                <h1 class=" animate__animated animate__backInUp">Why Do You Need An Outstanding 2D Animation Designer?</h1>
+                <p class="animate__animated animate__backInUp">2D animation production services remain a classic foundation in the field of visual storytelling, providing endless opportunities for artistic innovation and storytelling complexity. Its lasting appeal and flexibility make it a top choice for infusing characters, settings, and ideas with energy and involvement. Whether you aim to entertain, educate, or inspire, 2D character animation service is a strong tool for getting your message across effectively and meaningfully.               
                     </p>
-                    <p>    The fluid movements and lively visuals can enchant viewers of any age, overcoming linguistic and cultural differences to create a lasting impact on the audience’s imagination. 2D animation marketing video services offer limitless opportunities to create stories that leave a lasting impact on your audience, resonating in their hearts and minds for years to come.</p>
+                    <p class="animate__animated animate__backInUp">    The fluid movements and lively visuals can enchant viewers of any age, overcoming linguistic and cultural differences to create a lasting impact on the audience’s imagination. 2D animation marketing video services offer limitless opportunities to create stories that leave a lasting impact on your audience, resonating in their hearts and minds for years to come.</p>
                     <a href="{{route('contact')}}" class="btn btn-custom">Get Started</a>
             </div>
         </div>

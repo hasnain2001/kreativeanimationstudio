@@ -1,6 +1,8 @@
 @extends('welcome')
-
 @section('title', 'Animators | Creative Video Animation Services USA')
+@section('description','AFX presents in-depth project documentation! Our project documentation offers a behind-the-scenes look at our innovative and captivating creations!')
+@section('keywords', 'Animators | Creative Video Animation Services USA')
+@section('robots','index, follow')
 
 @section('main-content')
 
@@ -38,24 +40,31 @@
 }
 #gallery {
     position: relative; /* Ensures content layers properly */
-    padding-top: 70px; 
+    padding-top: 70px;
     padding-bottom: 100px; /* Makes space for the visible background image */
-    background: none; /* Start without a background directly applied */
+    background-image: url('{{ asset('images/2d-1.jpg') }}');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
 }
 
 #gallery::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    height:700px; 
-    background-image: url('{{ asset('images/2d-1.jpg') }}');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1; /* Sends the image behind the content */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Sends the overlay behind the content but above the image */
 }
+
+#gallery * {
+    position: relative;
+    z-index: 2; /* Ensures the content stays above the overlay */
+}
+
 .detail-section-end {
    background-image: url('{{asset('images/2d-1.jpg')}}');
   background-size: cover;
@@ -220,7 +229,7 @@
               AFX Video Animation Company Will
               
              <span>  Blow Your Mind!</span></h1>
-          <p>We are team of talented designers making websites with Bootstrap</p>
+          <p>We breathe life into your vision through vibrant animations tailored to your brand needs.</p>
           <div class="d-flex">
             <a href="{{route('contact')}}" class="btn btn-get-started">Get Started</a>
             {{-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
@@ -390,8 +399,10 @@
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-      <h2>Our Jaw-Dropping Animation Awaits</h2>
-      <div class=""><span>Check Out Our</span> <span class="description-title">Portfolio</span>
+
+      <div class=" text-center  animate__animated  animate__backInRight">
+        <h2 class=" ">Our Jaw-Dropping Animation Awaits</h2>
+        <span class=" ">Check Out Our Portfolio</span>
       </div>
   </div><!-- End Section Title -->
 
@@ -471,21 +482,17 @@
 
 <!-- /Gallery Section -->
 
-<section >
-  
-
-</section>
-
- 
-
   <!-- Details Section -->
   <section id="details" >
 
-    <!-- Section Title -->
-    <div class="container section-title animate__animated animate__backInRight" data-aos="fade-up">
+    {{-- <!-- Section Title -->
+    <div class="container text-center section-title " data-aos="fade-up">
+      <div class="animate__animated  animate__backInRight">
+
+
       <h2 class=" text-dark">Details</h2>
-      <div><span>Check Our Details</span></div>
-    </div>
+     <span>Check Our Details</span></div>
+    </div> --}}
     <!-- End Section Title -->
 
     <div class="container">
@@ -497,14 +504,12 @@
         </div>
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
           <h3 class="animate__animated animate__backInRight">The All-in-One Video Company Bringing Your Story To Life!</h3>
-          <p class="fst-italic">
+          <p class="fst-italic animate__animated animate__backInUp">
             At AFX Animators, we’re a team of passionate animators for hire dedicated to turning your ideas into animated masterpieces. Since our start, we’ve been crafting top-quality animations for clients across industries to help them achieve their goals.
-           
-          </p>
-          <p>
+           <br>       <br>         
          AFX is an award-winning custom animation services provider that specializes in creating exceptional video content to make businesses shine and stir emotions in viewers. Our animated video company handles every step of the production process. 
-          </p>
-          <p>      We start by learning about your company to craft a script that tells your story and connects with potential buyers. Then, we bring that story to life with vibrant animations and stunning visuals. AFX is your go-to creative animate video maker company, here to impress, explain, and help you reach your marketing goals with eye-catching videos.</p>
+         <br>      <br> 
+            We start by learning about your company to craft a script that tells your story and connects with potential buyers. Then, we bring that story to life with vibrant animations and stunning visuals. AFX is your go-to creative animate video maker company, here to impress, explain, and help you reach your marketing goals with eye-catching videos.</p>
           <a href="{{route('contact')}}" type="button" class="cta-button btn btn-primary">Get in Touch!</a>
         </div>
       </div>
@@ -516,8 +521,8 @@
           <img src="{{asset('images/gif2.gif')}}" class="img-fluid" alt="">
         </div>
         <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="animate__animated animate__backInRight">Why AFX Animators Should Be Your Top Pick?</h3>
-       <ul>
+          <h3 class="animate__animated  animate__backInRight">Why AFX Animators Should Be Your Top Pick?</h3>
+       <ul class=" animate__animated animate__backInUp">
         <li><strong>We offer custom solutions:</strong>We do not provide one-size-fits-all solutions. We customize our video animation services to meet your specific brand objectives and desired audience</li>
         <li><strong>We have award-winning expertise: </strong>Our team is proud to have a history of making animations that make a strong impression and grab attention (as displayed in our portfolio)</li>
         <li><strong>We offer fast turnaround times:</strong>We acknowledge the significance of meeting deadlines. We efficiently provide animations of high quality in the shortest possible time.</li>
@@ -533,8 +538,9 @@
         </div>
         <div class="col-md-7" data-aos="fade-up">
           <h3 class="animate__animated animate__backInRight">AFX's Explainer Videos Spark Action and Results!</h3>
-          <p>At AFX Animators commercial animation studios, our services serve as the vital link between you and your audience. We engage viewers with our carefully produced video content, motivating them to take action and deliver real outcomes for your company. </p>
-     <p>Our method entails producing explainer movies with targeted messages so that each frame conveys information. Our explainer videos are crafted by hand with an emphasis on quality, so they connect with your audience and increase interaction. Discover the impact of our explainer video creation and take the narrative for your company to new levels.</p>
+  <p class=" animate__animated animate__backInUp">At AFX Animators commercial animation studios, our services serve as the vital link between you and your audience. We engage viewers with our carefully produced video content, motivating them to take action and deliver real outcomes for your company.
+    <br>
+    Our method entails producing explainer movies with targeted messages so that each frame conveys information. Our explainer videos are crafted by hand with an emphasis on quality, so they connect with your audience and increase interaction. Discover the impact of our explainer video creation and take the narrative for your company to new levels.</p>
      <a href="{{route('contact')}}" type="button" class="cta-button btn btn-primary">Get in Touch!</a>
         </div>
       </div>
@@ -572,7 +578,7 @@
     <div class="row gy-4">
       <!-- FAQ Content -->
       <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
-        <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="content px-xl-5 animate__animated animate__backInRight" data-aos="fade-up" data-aos-delay="100">
           <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit.

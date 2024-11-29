@@ -12,29 +12,40 @@ class HomeController extends Controller
      public function pricing(){
         return view('pricing');
      }
+     public function about(){
+      return view('about');
+   }
+   public function terms(){
+      return view('terms');
+   }
+   public function privacy_policy(){
+      return view('privacy-policy');
+   }
      
      public function portfolio(){
         return view('portfolio');
      }
-     
+      
+
+     //about us //
      public function insight(){
-      return view('insights');
+      return view('about.insights');
    }
    public function client(){
-      return view('clients');
+      return view('about.clients');
    }
    public function management(){
-      return view('management');
+      return view('about.management');
    }
-   public function success (){
-      return view('success');
+   public function success_measurement (){
+      return view('about.success-measurement');
    }
-   public function project (){
-      return view('project-management');
+   public function project_documentation (){
+      return view('about.project-management');
    }
    
    public function our_process(){
-      return view('our-process');
+      return view('about.our-process');
    }
    //animated videos//
    public function animation_2d(){
