@@ -305,7 +305,7 @@
                 <a href="{{route('contact')}}" class="btn-custom btn">Get Started</a>
         </div>
         <div class="col-md-6">
-     <img src="{{asset('assets/img/details-1.png')}}" alt="" srcset="" class="" height="300px" width="100%" >
+     <img src="{{asset('images/3d-animation/img-1.png')}}" alt="" srcset="" class=" rounded" height="350px" width="100%" >
         </div>
     </div>
   

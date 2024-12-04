@@ -7,34 +7,35 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-}) ->name('home');
+})->name('home');
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-});
+Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 Route::controller(BlogController::class)->prefix('dashboard')->name('dashboard.')->group(function () {
-    Route::get('/blog',  'blogs_show')->name('index');
-    Route::get('/blog/create',  'create')->name('blog.create');
-    Route::post('/blog/store', 'store')->name('blog.store');
-    Route::get('/blog/{id}/edit', 'edit')->name('blog.edit');
-    Route::post('/admin/Blog/update/{id}', 'update')->name('Blog.update');
-    Route::delete('/admin/Blog/{id}', [BlogController::class, 'destroy'])->name('blog.delete');
-    Route::post('/blog/deleteSelected', [BlogController::class, 'deleteSelected'])->name('blog.deleteSelected');
-    Route::delete('/blog/bulk-delete', [BlogController::class, 'deleteSelected'])->name('blog.bulkDelete');
+Route::get('/blog',  'blogs_show')->name('index');
+Route::get('/blog/create',  'create')->name('blog.create');
+Route::post('/blog/store', 'store')->name('blog.store');
+Route::get('/blog/{id}/edit', 'edit')->name('blog.edit');
+Route::post('/admin/Blog/update/{id}', 'update')->name('Blog.update');
+Route::delete('/admin/Blog/{id}', [BlogController::class, 'destroy'])->name('blog.delete');
+Route::post('/blog/deleteSelected', [BlogController::class, 'deleteSelected'])->name('blog.deleteSelected');
+Route::delete('/blog/bulk-delete', [BlogController::class, 'deleteSelected'])->name('blog.bulkDelete');
+});
 });
 
+
 Route::controller(HomeController::class)->group(function(){
+    Route::get('/', 'index')->name('home');
     Route::get('/contact', 'contact')->name('contact');
     Route::get('/pricing', 'pricing')->name('pricing');
     Route::get('/portfolio', 'portfolio')->name('portfolio');
@@ -42,6 +43,8 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('/Terms-And-Condition', 'Terms')->name('Terms');
     Route::get('/projects', 'projects')->name('projects');
     Route::get('/privacy-policy', 'privacy_policy')->name('privacy-policy');
+    Route::get('/blog' ,'blogs')->name('blog');
+    Route::get('/blog/{slug}' ,'blog_Details')->name('blog-details');
     // about us pages //
     Route::get('/about/insiht', 'insight')->name('insight');
     Route::get('/about/Client-Onboarding-Process', 'client')->name('client');
@@ -88,9 +91,18 @@ Route::controller(HomeController::class)->prefix('service')->group(function(){
  
 
    });
+   // game-animation  pages  route //
    Route::controller(HomeController::class)->prefix('services')->group(function(){
     Route::get('/game-animation', 'game_animation')->name('game-animation'); 
     Route::get('/game-character-animation', 'game_character_animation')->name('game-character-animation'); 
+   });
+   // project  pages  route //
+   Route::controller(HomeController::class)->group(function(){
+    Route::get('/game-art', 'game_art')->name('game-art'); 
+    Route::get('/portfolio/arab-fashionista-match-3-mobile-game-design-and-development/', 'fashion')->name('fashion'); 
+    Route::get('/portfolio/3d-animation', 'project_animation_3d')->name('project.3d-animation'); 
+    Route::get('/game-character-animation', 'game_character_animation')->name('game-character-animation'); 
+ 
    });
 
 require __DIR__.'/auth.php';

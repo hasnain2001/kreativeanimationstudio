@@ -214,14 +214,14 @@
   <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
 
-    <video class="hero-bg" autoplay loop muted playsinline>
+    <video class="hero-bg" autoplay loop muted playsinline loading="lazy">
       <source src="{{asset('video/v-1.mp4')}}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="container">
       <div class="row gy-4 justify-content-between">
         <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
-          {{-- <img src="{{asset("assets/img/hero-img.png")}}" class="img-fluid animated" alt=""> --}}
+          {{-- <img src="{{asset("assets/img/hero-img.png")}}" class="img-fluid animated" alt="" loading="lazy"> --}}
         </div>
 
         <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
@@ -291,8 +291,8 @@
         </div>
         <div class="col-lg-3">
           <div class="card text-center border-0 shadow">
-            <a href="#" class=" text-decoration-none text-dark">
-            <img src="{{asset('images/2d-animation.png')}}" class="card-img-top mx-auto  p-3 h-50 img-services" alt="Motion Graphic">
+            <a href="{{{route('animation-2d')}}}" class=" text-decoration-none text-dark">
+            <img src="{{asset('images/2d-animation.png')}}" class="card-img-top mx-auto  p-3 h-50 img-services" alt="Motion Graphic" loading="lazy">
             <div class="card-body">
               <h5 class="d-animate">2D Animation</h5>
             </div>
@@ -302,11 +302,13 @@
         </div>
    <div class="col-lg-3">
     <div class="card text-center border-0 shadow">
-      <img src="{{asset('images/3d animation-01.png')}}" class="card-img-top img-services mx-auto p-3" alt="Motion Graphic" >
+      <a href="{{{route('animation-3d')}}}" class=" text-decoration-none text-dark">
+      <img src="{{asset('images/3d animation-01.png')}}" class="card-img-top img-services mx-auto p-3" alt="Motion Graphic" loading="lazy" >
       <div class="card-body">
 
         <h5 class="text-dark text-capitalize">3D Animation</h5>
       </div>
+     </a>
     </div>
    </div>
       </div>
@@ -314,65 +316,82 @@
       <div class="row gy-4">
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card text-center border-0 shadow">
-            <img src="{{asset('images/motion-graphir.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Motion Graphic">
+          <a href="{{route('motion-graphics')}}"  class=" text-decoration-none text-dark">
+            <img src="{{asset('images/motion-graphir.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Motion Graphic" loading="lazy">
+        
             <div class="card-body">
               <h5 class="text-capitalize">Motion Graphic</h5>
             </div>
+          </a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card text-center border-0 shadow">
-            <img src="{{asset('images/explainer.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Explainer Videos"/> 
+            <a href="{{route('explain-video')}}"  class=" text-decoration-none text-dark">
+            <img src="{{asset('images/explainer.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Explainer Videos" loading="lazy"> 
             <div class="card-body">
               <h5 class="text-capitalize">Explainer Videos</h5>
+              </a>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card text-center border-0 shadow">
-            <img src="{{asset('images/promotional-videos.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Promotional Videos">
+            <a href="{{route('promotional_video')}}" class=" text-decoration-none text-dark">
+            <img src="{{asset('images/promotional-videos.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Promotional Videos"loading="lazy">
             <div class="card-body">
               <h5 class="text-capitalize">Promotional Videos</h5>
             </div>
+          </a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card text-center border-0 shadow">
-            <img src="{{asset('images/video editing.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Video Editing" />
+            <a href="{{route('video-editing')}}" class=" text-decoration-none text-dark">
+            <img src="{{asset('images/video editing.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Video Editing" loading="lazy">
             <div class="card-body">
               <h5 class="text-capitalize">Video Editing</h5>
             </div>
+          </a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card text-center border-0 shadow">
-            <img src="{{asset('images/logo animation.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Video Editing">
+            <a href="{{route('logo_animation')}}" class=" text-decoration-none text-dark">
+            <img src="{{asset('images/logo animation.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Video Editing" loading="lazy">
             <div class="card-body">
               <h5 class="text-capitalize">Logo Animation</h5>
             </div>
+          </a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card text-center border-0 shadow">
-            <img src="{{asset('images/stop motion.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Video Editing"/>
+            <a href="{{route('stop_motion')}}" class=" text-decoration-none text-dark">
+            <img src="{{asset('images/stop motion.png')}}" class="card-img-top mx-auto p-3 img-services " alt="Video Editing" loading="lazy">
             <div class="card-body">
               <h5 class="text-capitalize">stop motion animation </h5>
             </div>
+          </a>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card text-center border-0 shadow">
-            <img src="{{asset('images/rotoscoping.png')}}" class="card-img-top mx-auto p-3  img-services " alt="Video Editing">
+            <a href="{{route('rotoscoping')}}" class=" text-decoration-none text-dark">
+            <img src="{{asset('images/rotoscoping.png')}}" class="card-img-top mx-auto p-3  img-services " alt="Video Editing" loading="lazy">
             <div class="card-body">
               <h5 class="text-capitalize">rotoscoping services </h5>
             </div>
+          </a>
           </div>
         </div>  <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card text-center border-0 shadow">
-            <img src="{{asset('images/storyboard animation.png')}}" class="card-img-top mx-auto p-3  img-services " alt="Video Editing">
+            <a href="{{route('storyboard')}}" class=" text-decoration-none text-dark">
+            <img src="{{asset('images/storyboard animation.png')}}" class="card-img-top mx-auto p-3  img-services " alt="Video Editing" loading="lazy">
             <div class="card-body">
               <h5 class="text-capitalize">story board animation</h5>
             </div>
+          </a>
           </div>
         </div>
      
@@ -388,7 +407,7 @@
       Click for Show-Stopping Animation Solutions!
     </p>
     <div class="d-flex justify-content-end">
-      <a href="" type="button" class="cta-button btn btn-primary">Act Now!</a>
+      <a href="" type="button" class="cta-button btn btn-dark">Act Now!</a>
     </div>
   </div>
 </section>
@@ -413,7 +432,7 @@
           <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                   <a href="{{ asset('assets/img/gallery/gallery-1.jpg') }}" class="glightbox" data-gallery="images-gallery">
-                      <img src="{{ asset('assets/img/gallery/gallery-1.jpg') }}" alt="" class="img-fluid">
+                      <img src="{{ asset('assets/img/gallery/gallery-1.jpg') }}" alt="" class="img-fluid" loading="lazy">
                   </a>
               </div>
           </div><!-- End Gallery Item -->
@@ -421,7 +440,7 @@
           <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                   <a href="{{ asset('assets/img/gallery/gallery-2.jpg') }}" class="glightbox" data-gallery="images-gallery">
-                      <img src="{{ asset('assets/img/gallery/gallery-2.jpg') }}" alt="" class="img-fluid">
+                      <img src="{{ asset('assets/img/gallery/gallery-2.jpg') }}" alt="" class="img-fluid" loading="lazy">
                   </a>
               </div>
           </div><!-- End Gallery Item -->
@@ -429,7 +448,7 @@
           <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                   <a href="{{ asset('assets/img/gallery/gallery-3.jpg') }}" class="glightbox" data-gallery="images-gallery">
-                      <img src="{{ asset('assets/img/gallery/gallery-3.jpg') }}" alt="" class="img-fluid">
+                      <img src="{{ asset('assets/img/gallery/gallery-3.jpg') }}" alt="" class="img-fluid" loading="lazy">
                   </a>
               </div>
           </div><!-- End Gallery Item -->
@@ -437,7 +456,7 @@
           <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                   <a href="{{ asset('assets/img/gallery/gallery-4.jpg') }}" class="glightbox" data-gallery="images-gallery">
-                      <img src="{{ asset('assets/img/gallery/gallery-4.jpg') }}" alt="" class="img-fluid">
+                      <img src="{{ asset('assets/img/gallery/gallery-4.jpg') }}" alt="" class="img-fluid" loading="lazy">
                   </a>
               </div>
           </div><!-- End Gallery Item -->
@@ -445,7 +464,7 @@
           <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                   <a href="{{ asset('assets/img/gallery/gallery-5.jpg') }}" class="glightbox" data-gallery="images-gallery">
-                      <img src="{{ asset('assets/img/gallery/gallery-5.jpg') }}" alt="" class="img-fluid">
+                      <img src="{{ asset('assets/img/gallery/gallery-5.jpg') }}" alt="" class="img-fluid" loading="lazy">
                   </a>
               </div>
           </div><!-- End Gallery Item -->
@@ -453,7 +472,7 @@
           <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                   <a href="{{ asset('assets/img/gallery/gallery-6.jpg') }}" class="glightbox" data-gallery="images-gallery">
-                      <img src="{{ asset('assets/img/gallery/gallery-6.jpg') }}" alt="" class="img-fluid">
+                      <img src="{{ asset('assets/img/gallery/gallery-6.jpg') }}" alt="" class="img-fluid" loading="lazy">
                   </a>
               </div>
           </div><!-- End Gallery Item -->
@@ -461,7 +480,7 @@
           <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                   <a href="{{ asset('assets/img/gallery/gallery-7.jpg') }}" class="glightbox" data-gallery="images-gallery">
-                      <img src="{{ asset('assets/img/gallery/gallery-7.jpg') }}" alt="" class="img-fluid">
+                      <img src="{{ asset('assets/img/gallery/gallery-7.jpg') }}" alt="" class="img-fluid" loading="lazy">
                   </a>
               </div>
           </div><!-- End Gallery Item -->
@@ -469,7 +488,7 @@
           <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
                   <a href="{{ asset('assets/img/gallery/gallery-8.jpg') }}" class="glightbox" data-gallery="images-gallery">
-                      <img src="{{ asset('assets/img/gallery/gallery-8.jpg') }}" alt="" class="img-fluid">
+                      <img src="{{ asset('assets/img/gallery/gallery-8.jpg') }}" alt="" class="img-fluid" loading="lazy">
                   </a>
               </div>
           </div><!-- End Gallery Item -->
@@ -499,7 +518,7 @@
 
       <div class="row gy-4 align-items-center features-item">
         <div class="col-md-5 " data-aos="zoom-out" data-aos-delay="100">
-          <img src="{{asset('images/gif.gif')}}" class=" img-fluid" alt="gif-1" >
+          <img src="{{asset('images/gif.gif')}}" class=" img-fluid" alt="gif-1" loading="lazy" >
 
         </div>
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -510,7 +529,7 @@
          AFX is an award-winning custom animation services provider that specializes in creating exceptional video content to make businesses shine and stir emotions in viewers. Our animated video company handles every step of the production process. 
          <br>      <br> 
             We start by learning about your company to craft a script that tells your story and connects with potential buyers. Then, we bring that story to life with vibrant animations and stunning visuals. AFX is your go-to creative animate video maker company, here to impress, explain, and help you reach your marketing goals with eye-catching videos.</p>
-          <a href="{{route('contact')}}" type="button" class="cta-button btn btn-primary">Get in Touch!</a>
+          <a href="{{route('contact')}}" type="button" class="cta-button btn btn-dark">Get in Touch!</a>
         </div>
       </div>
       
@@ -518,7 +537,7 @@
 
       <div class="row gy-4 align-items-center features-item" style="background-image: ">
         <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{asset('images/gif2.gif')}}" class="img-fluid" alt="">
+          <img src="{{asset('images/gif2.gif')}}" class="img-fluid" alt="" loading="lazy">
         </div>
         <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
           <h3 class="animate__animated  animate__backInRight">Why AFX Animators Should Be Your Top Pick?</h3>
@@ -528,20 +547,20 @@
         <li><strong>We offer fast turnaround times:</strong>We acknowledge the significance of meeting deadlines. We efficiently provide animations of high quality in the shortest possible time.</li>
         <li><strong>We have unmatched creativity:</strong> Our animated video agency innovates and effectively breathes life into your vision by exploring the limits of animation.</li>
        </ul>
-       <a href="{{route('contact')}}" type="button" class="cta-button btn btn-primary">Get in Touch!</a>
+       <a href="{{route('contact')}}" type="button" class="cta-button btn btn-dark">Get in Touch!</a>
         </div>
       </div><!-- Features Item -->
 
       <div class="row gy-4 align-items-center features-item">
         <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-          <img src="{{asset('images/gif4.gif')}}" class="img-fluid" alt="">
+          <img src="{{asset('images/gif4.gif')}}" class="img-fluid" alt="" loading="lazy">
         </div>
         <div class="col-md-7" data-aos="fade-up">
           <h3 class="animate__animated animate__backInRight">AFX's Explainer Videos Spark Action and Results!</h3>
   <p class=" animate__animated animate__backInUp">At AFX Animators commercial animation studios, our services serve as the vital link between you and your audience. We engage viewers with our carefully produced video content, motivating them to take action and deliver real outcomes for your company.
     <br>
     Our method entails producing explainer movies with targeted messages so that each frame conveys information. Our explainer videos are crafted by hand with an emphasis on quality, so they connect with your audience and increase interaction. Discover the impact of our explainer video creation and take the narrative for your company to new levels.</p>
-     <a href="{{route('contact')}}" type="button" class="cta-button btn btn-primary">Get in Touch!</a>
+     <a href="{{route('contact')}}" type="button" class="cta-button btn btn-dark">Get in Touch!</a>
         </div>
       </div>
       <!-- Features Item -->
@@ -569,8 +588,53 @@
     </div>
   </section>
   
- 
-
+  <!--  Blog Section -->
+  <section class="blog py-5 bg-light">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <h2 class="heading-1 fw-bold">Shopping Hacks & Savings Tips & Tricks</h2>
+          <p class="text-muted">Discover the best tips and tricks to save money and shop smarter!</p>
+        </div>
+      </div>
+      <div id="blogCarousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+          @foreach ($blogs->chunk(3) as $chunk)
+            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+              <div class="row gx-3">
+                @foreach ($chunk as $blog)
+                  <div class="col-md-4">
+                    <div class="card shadow-sm border-0 h-100">
+                      <img class="card-img-top img-fluid rounded" src="{{ asset($blog->category_image) }}" alt="Blog Post Image" style="height:200px; object-fit:cover;">
+                      <div class="card-body">
+                        <h5 class="card-title  fw-bold">{{ $blog->title }}</h5>
+                        <p class="card-text text-muted">{{ Str::limit($blog->excerpt, 100) }}</p>
+                        @if ($blog->slug)
+                          <a href="{{ route('blog-details', ['slug' => Str::slug($blog->slug)]) }}" class="btn btn-dark btn-sm">Read More</a>
+                        @else
+                          <a href="javascript:;" class="btn btn-secondary btn-sm disabled">No Slug</a>
+                        @endif
+                      </div>
+                    </div>
+                  </div>
+                @endforeach
+              </div>
+            </div>
+          @endforeach
+        </div>
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  
 
  <!-- FAQ Section -->
 <section id="faq" class="faq section light-background">
@@ -637,7 +701,7 @@
 
       <!-- FAQ Image -->
       <div class="col-lg-5 order-1 order-lg-2">
-        <img src="assets/img/faq.jpg" class="img-fluid" alt="FAQ Image" data-aos="zoom-in" data-aos-delay="100">
+        <img src="assets/img/faq.jpg" class="img-fluid" alt="FAQ Image" data-aos="zoom-in" data-aos-delay="100" loading="lazy">
       </div>
     </div>
   </div>

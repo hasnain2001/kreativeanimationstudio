@@ -275,7 +275,7 @@ color: black;
   <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
     <video class="hero-bg" autoplay loop muted playsinline>
-        <source src="{{asset('video/v-1.mp4')}}" type="video/mp4">
+        <source src="{{asset('images/promotional-video/promotional-video.mp4')}}" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     <div class="container">
@@ -283,7 +283,7 @@ color: black;
         <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
    
         </div>
-        <div class="">
+        <div class=" col-md-6">
           <h1>animated-promotional-video-service</h1>
           <p> AFX Animators, your premier promotional video maker company, offers top-notch custom animation services tailored to meet your unique marketing needs.</p>
 

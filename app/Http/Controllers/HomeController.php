@@ -1,14 +1,33 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Models\Blog;
 
 class HomeController extends Controller
 {
     public function contact(){
         return view('contact');
      }
+     public function blogs(){
+      $blogs = Blog::select( 'id','title','slug','category_image',)->orderBy('created_at','desc')->paginate(9);
+      return view('blog',compact('blogs'));
+   }
+   public function index(){
+      $blogs = Blog::select('id','title','slug','category_image',)->orderBy('created_at','desc')->limit(10)->get();
+ return view('home',compact('blogs'));
+   }
+   public function blog_Details($name) {
+
+      $slug = Str::slug($name);
+
+
+      $blog = Blog::where('slug', $slug)->firstOrFail();
+
+
+      return view('blog_details', compact('blog'));
+  }
      public function pricing(){
         return view('pricing');
      }
@@ -141,7 +160,16 @@ class HomeController extends Controller
    public function game_character_animation(){
       return view('games-Animation.game-character-animation');
    }
-   
+      //Projects//
+   public function game_art(){
+      return view('projects.game-art.game-art');
+   }
+   public function fashion(){
+      return view('projects.game-art.fashion');
+   }
+   public function project_animation_3d(){
+      return view('projects.3d-animation.3d-animation');
+   }
 
    
 

@@ -1,4 +1,10 @@
-<x-app-layout>
+@extends('layouts.app')
+@section('title')
+    Profile
+@endsection
+@section('main-content')
+  
+   <main id="main" class=" main">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Profile') }}
@@ -26,4 +32,8 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+   </main>
+ 
+    <script src="{{asset('bootstrap-5.0.2/js/bootstrap.min.js')}}"></script>
+     
+@endsection

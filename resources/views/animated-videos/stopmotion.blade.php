@@ -1,8 +1,12 @@
 @extends('welcome')
 
-@section('title')
-Stop Motion Animation Service - Reviving Magical Stories
-@endsection
+@section('title','Stop Motion Animation Service - Reviving Magical Stories')
+
+@section('description', 'AFX Animators creates lifelike game character animations, enhancing your game projects with expert craftsmanship and stunning visuals.')
+
+@section('keywords', 'Game Animation Experts | Professional Video Animation Services USA | Lifelike Game Character Animations')
+
+@section('robots', 'index, follow')
 
 @section('main-content')
 <style>
@@ -262,7 +266,7 @@ Stop Motion Animation Service - Reviving Magical Stories
   <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
     <video class="hero-bg" autoplay loop muted playsinline>
-        <source src="{{asset('video/v-1.mp4')}}" type="video/mp4">
+        <source src="{{asset('images/stop-motion/stop-motion.mp4')}}" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     <div class="container">
@@ -270,7 +274,7 @@ Stop Motion Animation Service - Reviving Magical Stories
         <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
    
         </div>
-        <div class="">
+        <div class="col-md-6">
           <h1>Stop Motion Animation Company Delivering Jaw-Dropping Visual Narratives!</h1>
           <p>Bring the magic of stop-motion animation to your next project! AFX, your trusted partner in custom animation, offers a captivating stop-motion animation service that breathes life into your vision.</p>
 

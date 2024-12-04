@@ -286,7 +286,7 @@ AFX Animators excels in infographics video services, turning data into dynamic v
         <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
    
         </div>
-    <div class="">
+    <div class=" col-md-5">
 <h1>Concept Art Company Your Secret to Stunning Visuals!</h1>
 <p>Whether you’re in the entertainment, gaming, advertising, or any creative industry, our concept art creators develop your animations tailored to your specific needs.</p>
 

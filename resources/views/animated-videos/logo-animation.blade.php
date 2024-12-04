@@ -262,7 +262,7 @@ Stop Motion Animation Service - Reviving Magical Stories
   <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
     <video class="hero-bg" autoplay loop muted playsinline>
-        <source src="{{asset('video/v-1.mp4')}}" type="video/mp4">
+        <source src="{{asset('images/logo-animation/logo-animation.mp4')}}" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     <div class="container">
@@ -270,7 +270,7 @@ Stop Motion Animation Service - Reviving Magical Stories
         <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
    
         </div>
-    <div class="">
+    <div class=" col-md-5">
         <h1>Animated Logo Design Company Offering You a Logo Makeover!</h1>
         <p>A dynamic animated logo commands attention better than a static one. A team of expert animation logo makers will help you bring your brand’s vision to life.</p>
 
