@@ -7,206 +7,108 @@
 @section('main-content')
 
 <style>
-.cta-section {
-  background-color: #ffeae8;
-  border-top: 5px solid #ff5733;
+.hero-contact {
+    background-repeat: repeat;
+ object-fit: fill;
+     width:100%; 
+    height:auto ;
+    padding: 120px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-image: url('{{ asset('images/home.png') }}');
 }
 
-.cta-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
 
-.cta-text {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta-button {
-  background: linear-gradient(to right, #ff5733, #ff794d);
-  color: #fff;
-  border: none;
-  border-radius: 30px;
-  padding: 10px 25px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background: linear-gradient(to right, #ff794d, #ff5733);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
-}
-#gallery {
-    position: relative; /* Ensures content layers properly */
-    padding-top: 70px;
-    padding-bottom: 100px; /* Makes space for the visible background image */
-    background-image: url('{{ asset('images/2d-1.jpg') }}');
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center;
-    background-repeat: no-repeat;
-    color:white;
-}
-
-#gallery::after {
+.hero-contact::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1; /* Sends the overlay behind the content but above the image */
-}
-
-#gallery * {
-    position: relative;
-    z-index: 2; /* Ensures the content stays above the overlay */
-}
-
-.detail-section-end {
-   background-image: url('{{asset('images/2d-1.jpg')}}');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 50px 0;
-}
-.detail-section-end::before{
-  background: rgba(17, 17, 17, 0.541);
-}
-
-.detail-section-end h3 {
-  font-size: 2rem;
-  line-height: 1.5;
-}
-
-.btn-custom {
-  color: white;
-  background-color: #007bff;
-  border: none;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.btn-custom:hover {
-  background-color: #0056b3;
-  color: white;
-}
-.hero-contact {
-  background-image: url('{{ asset('images/home.png') }}');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 480px;
-  padding: 120px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the rgba values for desired shade */
+    z-index: 1;
 }
 
 
-  /* .hero-contact::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: 0;
-  width: 200%;
-  height: 120px;
-  background: #6ca5d1; 
-  z-index: 1;
-  clip-path: polygon(0% 50%, 25% 75%, 50% 50%, 75% 100%, 100% 50%, 100% 100%, 0% 100%);
-  animation: wave-loop 6s linear infinite;
-  } */
 
-  .hero-contact::after {
-  content: '';
-  position: absolute;
-  top: 380px;
-  left: 0;
-  width: 200%;
-  height: 100px;
-  background: #083241;
-  z-index: 0;
-  clip-path: polygon(0% 75%, 25% 50%, 50% 75%, 75% 50%, 100% 75%, 100% 100%, 0% 100%);
-  animation: wave-loop 8s linear infinite reverse;
+  .detail-section-end {
+     background-image: url('{{asset('images/2d-1.jpg')}}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
   }
 
-
-/* Animation for looping waves */
-@keyframes wave-loop {
-  from {
-    transform: translateX(0);
+  #gallery {
+      position: relative; /* Ensures content layers properly */
+      padding-top: 70px;
+      padding-bottom: 100px; /* Makes space for the visible background image */
+      background-image: url('{{ asset('images/2d-1.jpg') }}');
+      background-size: cover; /* Ensures the image covers the entire section */
+      background-position: center;
+      background-repeat: no-repeat;
+      color:white;
   }
-  to {
-    transform: translateX(-50%);
-  }
-}
 
-
-
-
-.wave-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  overflow: hidden;
-}
-
-.waves {
-  position: absolute;
-  top: -5px;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  animation: wave-animation 6s infinite linear;
-}
-
-
-
-.btn-custom {
-  background-color: #ff5722;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn-custom:hover {
-  background-color: #ff784e;
-  color: #fff;
-}
-
-  .gif-1{
-  height: 200px;
-  width: 100%;
-}
-.img-services{
-  height:150px ;
-  max-height: 150px;
-}
-@media screen  (max-width: 600px) {
-  .gif-1{
-  height: 100px;
-  width: 100%;
-  padding-right:100px;
+    /* Horizontal Scroll */
+    .horizontal-scroll {
+      overflow-x: auto; /* Enables horizontal scrolling */
+      white-space: nowrap; /* Prevents wrapping to the next line */
+      scrollbar-color: #0e0c0c #f1f1f1; /* Custom scrollbar colors */
+      scrollbar-width: thin; /* Thin scrollbar */
+    }
   
-}
-.img-services{
-  height:auto ;
- width: 100%;
-}
-}
+    /* Webkit Scrollbar Styling */
+    .horizontal-scroll::-webkit-scrollbar {
+      height: 10px; /* Scrollbar height */
+    }
+  
+    .horizontal-scroll::-webkit-scrollbar-thumb {
+      background-color: #0e0c0c; /* Scrollbar thumb color */
+      border-radius: 10px; /* Rounded scrollbar thumb */
+      border: 2px solid #f1f1f1; /* Adds padding around the thumb */
+    }
+  
+    .horizontal-scroll::-webkit-scrollbar-track {
+      background-color: #f1f1f1; /* Scrollbar track color */
+    }
+  
+    .horizontal-scroll::-webkit-scrollbar-thumb:hover {
+      background-color: #bbb; /* Hover effect for thumb */
+    }
 
+    .hero-contact h3{
+  font-size: 20px;
+}
+@media (max-width:1200px) {
+    .hero-contact {
+    height: 400px;
+    padding: 100px 0;
+}
+.hero-contact h3{
+  font-size: 12px;
+}
+}@media (max-width:992px) {
+    .hero-contact {
+    height: 350px;
+    padding: 80px 0;
+}
+}@media (max-width:768px) {
+    .hero-contact {
+    height: 300px;
+    padding: 60px 0;
+}
+}@media (max-width:576px) {
+    .hero-contact {
+    height: 250px;
+    padding: 40px 0;
+}
+}
 </style>
 <main class="main">
   
@@ -407,7 +309,7 @@
       Click for Show-Stopping Animation Solutions!
     </p>
     <div class="d-flex justify-content-end">
-      <a href="" type="button" class="cta-button btn btn-dark">Act Now!</a>
+      <a href="" type="button" class="cta-button btn ">Act Now!</a>
     </div>
   </div>
 </section>
@@ -570,6 +472,7 @@
     </div>
 
   </section>
+  
   <!-- /Details Section -->
 
   <section id="hero" class="hero-contact">
@@ -579,7 +482,7 @@
           <!-- Add content here if needed -->
         </div>
         <div class="col-md-6 text-end animate__animated animate__backInRight">
-          <h3 class="text-white">
+          <h3 class=" card-title text-white ">
             Step into Our Animation Wonderland<br>From Ordinary to Extraordinary!
           </h3>
           <a href="/" class="btn btn-custom">Let’s Start A Conversation!</a>
@@ -588,52 +491,39 @@
     </div>
   </section>
   
-  <!--  Blog Section -->
-  <section class="blog py-5 bg-light">
-    <div class="container">
-      <div class="row mb-4">
-        <div class="col-12 text-center">
-          <h2 class="heading-1 fw-bold">Shopping Hacks & Savings Tips & Tricks</h2>
-          <p class="text-muted">Discover the best tips and tricks to save money and shop smarter!</p>
-        </div>
-      </div>
-      <div id="blogCarousel" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-inner">
-          @foreach ($blogs->chunk(3) as $chunk)
-            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-              <div class="row gx-3">
-                @foreach ($chunk as $blog)
-                  <div class="col-md-4">
-                    <div class="card shadow-sm border-0 h-100">
-                      <img class="card-img-top img-fluid rounded" src="{{ asset($blog->category_image) }}" alt="Blog Post Image" style="height:200px; object-fit:cover;">
-                      <div class="card-body">
-                        <h5 class="card-title  fw-bold">{{ $blog->title }}</h5>
-                        <p class="card-text text-muted">{{ Str::limit($blog->excerpt, 100) }}</p>
-                        @if ($blog->slug)
-                          <a href="{{ route('blog-details', ['slug' => Str::slug($blog->slug)]) }}" class="btn btn-dark btn-sm">Read More</a>
-                        @else
-                          <a href="javascript:;" class="btn btn-secondary btn-sm disabled">No Slug</a>
-                        @endif
-                      </div>
-                    </div>
-                  </div>
-                @endforeach
-              </div>
-            </div>
-          @endforeach
-        </div>
-        <!-- Carousel controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+<!-- Blog Section -->
+<section class="blog py-5 bg-light">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-12 text-center">
+        <h2 class="heading-1 fw-bold">Our Blog</h2>
       </div>
     </div>
-  </section>
+    <!-- Horizontal Scrollable Wrapper -->
+    <div class="horizontal-scroll">
+      <div class="row flex-nowrap gx-3">
+        @foreach ($blogs as $blog)
+          <div class="col-md-4" style="min-width: 300px;"> <!-- Adjust the min-width as needed -->
+            <div class="card shadow-sm border-0 h-100">
+              <img class="card-img-top img-fluid rounded" src="{{ asset($blog->category_image) }}" alt="Blog Post Image" style="height:200px; object-fit:cover;">
+              <div class="card-body">
+                <h6 class=" fw-bold text-truncate" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ $blog->title }}</h6>
+
+                <p class="card-text text-muted">{{ Str::limit($blog->excerpt, 100) }}</p>
+                @if ($blog->slug)
+                  <a href="{{ route('blog-details', ['slug' => Str::slug($blog->slug)]) }}" class=" cta-button btn btn-dark btn-sm">Read More</a>
+                @else
+                  <a href="javascript:;" class="btn btn-secondary btn-sm disabled">No Slug</a>
+                @endif
+              </div>
+            </div>
+          </div>
+        @endforeach
+      </div>
+    </div>
+  </div>
+</section>
+
   
 
  <!-- FAQ Section -->

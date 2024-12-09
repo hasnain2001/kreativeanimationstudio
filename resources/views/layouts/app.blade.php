@@ -27,6 +27,8 @@
   <link href="{{asset('admin/assets/vendor/quill/quill.bubble.css')}}" rel="stylesheet">
   <link href="{{asset('admin/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
   <link href="{{asset('admin/assets/vendor/simple-datatables/style.css')}}" rel="stylesheet">
+<link rel="stylesheet" href="{{asset('DataTables/datatables.css')}}">
+<link rel="stylesheet" href="{{asset('DataTables/datatables.min.css')}}">
 
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
@@ -294,6 +296,7 @@
     </div>
   </footer><!-- End Footer -->
 
+<script src="{{asset('DataTables/datatables.min.js')}}"></script>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/super-build/ckeditor.js"></script>
     <script src="{{ asset('js/cke-ditor.js') }}"></script>

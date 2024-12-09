@@ -66,7 +66,9 @@
     height: 200px;
     align-items: center;
     }
+
     </style>
+
 
     <div class="image-container">
         <img src="{{ asset('images/game-art/img-1.png') }}" alt="First Image" class="img-1">

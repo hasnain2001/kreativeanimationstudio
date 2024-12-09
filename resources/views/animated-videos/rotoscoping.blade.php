@@ -286,7 +286,7 @@ AFX Animators excels in infographics video services, turning data into dynamic v
         <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
    
         </div>
-    <div class="">
+    <div class=" col-md-6">
 <h1>Rotoscoping Company  Turning Good Animations into Great Ones!</h1>
 <p>AFX Animators provides excellent rotoscoping services to enhance your animation. We can combine live-action video with animation seamlessly with this careful method, producing an engaging fusion of artistic flair and reality.</p>
 

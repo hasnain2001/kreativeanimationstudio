@@ -48,61 +48,65 @@
                 @csrf
                 @method('DELETE')
               <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead class="thead-dark">
+             <div class="table-responsive">
+    <table class="table datatable  table-bordered border-primary">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">
+                    <input type="checkbox" id="select-all-header">
+                </th>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Blog Image</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if ($blogs->isEmpty())
+                <tr>
+                    <td colspan="5" class="text-center text-muted">No blogs available.</td>
+                </tr>
+            @else
+                @foreach ($blogs as $blog)
                     <tr>
-                        <th scope="col">
-                            <input type="checkbox" id="select-all-header">
-                        </th>
-                        <th scope="col">#</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Blog Image</th>
-                        <th scope="col">Action</th>
+                        <td>
+                            <input type="checkbox" name="selected_blogs[]" value="{{ $blog->id }}" class="selectCheckbox">
+                        </td>
+                        <th scope="row">{{ $loop->iteration }}</th>
+                        <td>{{ $blog->title }}</td>
+                        <td>
+                            @if ($blog->category_image)
+                                <img src="{{ asset($blog->category_image) }}" alt="Category Image" class="img-thumbnail" style="max-width: 80px;">
+                            @else
+                                <span class="badge badge-secondary">No Image</span>
+                            @endif
+                        </td>
+                        <td>
+                            <a href="{{ route('dashboard.blog.edit', $blog->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                            <form action="{{ route('dashboard.blog.delete', $blog->id) }}" method="POST" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this blog entry?')">Delete</button>
+                            </form>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    @if ($blogs->isEmpty())
-    <p class="text-center text-muted">No blogs available.</p>
-@else
-                    @foreach ($blogs as $blog)
-                        <tr>
-                            <td>
-                                <input type="checkbox" name="selected_blogs[]" value="{{ $blog->id }}" class="selectCheckbox">
-                            </td>
-                            <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $blog->title }}</td>
-                            <td>
-                                @if ($blog->category_image)
-                                    <img src="{{ asset($blog->category_image) }}" alt="Category Image" class="img-thumbnail" style="max-width: 80px;">
-                                @else
-                                    <span class="badge badge-secondary">No Image</span>
-                                @endif
-                            </td>
-                            <td>
-                                <a href="{{ route('dashboard.blog.edit', $blog->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                <form action="{{ route('dashboard.blog.delete', $blog->id) }}" method="POST" class="d-inline">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this blog entry?')">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endforeach
-                    @endif
-                </tbody>
-                <tfoot class="thead-dark">
-                    <tr>
-                        <th scope="col">
-                            <input type="checkbox" id="select-all-footer">
-                        </th>
-                        <th scope="col">#</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Blog Image</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </tfoot>
-              </table>
-              <!-- End Table with stripped rows -->
+                @endforeach
+            @endif
+        </tbody>
+        <tfoot class="thead-dark">
+            <tr>
+                <th scope="col">
+                    <input type="checkbox" id="select-all-footer">
+                </th>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Blog Image</th>
+                <th scope="col">Action</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
 
             </div>
           </div>
@@ -110,6 +114,9 @@
         </div>
       </div>
     </section>
+    <div class="container my-4">
+        {{ $blogs->links('vendor.pagination.bootstrap-5') }}
+    </div>
 
   </main><!-- End #main -->
 

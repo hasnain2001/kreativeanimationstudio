@@ -28,6 +28,7 @@ header("X-Robots-Tag:index, follow");?>
   <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
   {{-- <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet"> --}}
   <link href="{{asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
@@ -35,15 +36,9 @@ header("X-Robots-Tag:index, follow");?>
 <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/page.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/navbar.css')}}">
-<style>
-    .dropdown-large{
-    position: relative;
-    background: url('{{asset('images/1.png')}}') no-repeat center center;
-    z-index: 6; /* Ensures the overlay appears behind the text */
-    background-size: cover; /* Ensures the image covers the entire dropdown */
-  }
-</style>
-</head>
+<link rel="stylesheet" href="{{asset('assets/css/home.css')}}">
+
+ </head>
 
 <body class="">
 
@@ -63,7 +58,7 @@ header("X-Robots-Tag:index, follow");?>
   <!-- Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
   <script src="{{asset('bootstrap-5.0.2/js/bootstrap.min.js')}}"></script>
-  <script src="{{asset('assets/js/navbar,js')}}"></script>
+  <script src="{{asset('assets/js/navbar.js')}}"></script>
 
 </body>
 

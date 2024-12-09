@@ -497,7 +497,7 @@ Animated Explainer Video Services - Engaging Your Audiences|
         
                     <!-- Illustration -->
                     <div class="col-md-4 text-center">
-                        <img src="{{asset('images/expl')}}" alt="Illustration" class="illustration">
+                        <img src="{{asset('images/explainer-video/gif.gif')}}" alt="Illustration" class="illustration">
                     </div>
                 </div>
             </div>
