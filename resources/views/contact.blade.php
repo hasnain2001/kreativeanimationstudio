@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    object-fit: fill;
     background: url('{{ asset('images/2d-1.jpg') }}') center center / cover no-repeat;
   }
   .hero-contact::before {
@@ -44,6 +45,30 @@
     <h2>Contact</h2>
 
   </div>
+        <!-- Success/Error Messages -->
+        @if(session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fa fa-check-circle me-2"></i><strong>Success!</strong> {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+  
+  
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <strong>Please fix the following issues:</strong> 
+            <ul class="mt-2">
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    @if (session('error'))
+  <div class="alert alert-danger">
+    {{ session('error') }}
+  </div>
+  @endif
 
   <div class="container">
     <div class="row gy-4">
@@ -72,7 +97,8 @@
       </div>
 
       <div class="col-lg-8">
-        <form action="forms/contact.php" method="post" class="php-email-form">
+        <form action="{{ route('contact.submit') }}" method="POST" class="php-email-form">
+          @csrf
           <div class="row gy-4">
             <div class="col-md-6">
               <input type="text" name="name" placeholder="Your Name" required>
